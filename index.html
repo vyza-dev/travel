@@ -15,6 +15,9 @@
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
+<!-- ── Pinterest domain verification (for business account + API access) ── -->
+<meta name="p:domain_verify" content="47c4046286177f1d9a5b3bf910f4a976"/>
+
 <!-- ── Open Graph / Social Sharing ── -->
 <!-- Replace https://avyzaventures.netlify.app with your Netlify URL once live, e.g. https://avyzaventures.netlify.app -->
 <meta property="og:type"        content="website">
@@ -404,21 +407,25 @@ nav.nav-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(
   #main-site .hero-to-drawer .transition-quote { font-size: 15px !important; }
 
   /* Drawer section */
-  #main-site .drawer-section { padding: 40px 0 56px !important; min-height: 360px !important; }
+  #main-site .drawer-section { padding: 40px 0 56px !important; min-height: 400px !important; }
 
-  /* Drawer box — shorter on mobile */
-  #main-site .drawer-wrap { width: 92% !important; height: 240px !important; overflow: hidden !important; }
+  /* Drawer box — mobile. 280px gives breathing room above row 1 and
+     below row 2 (was 240px — row 2 sat on the drawer edge). */
+  #main-site .drawer-wrap { width: 92% !important; height: 280px !important; overflow: hidden !important; }
 
-  /* Ticker items: scale down to fit shorter drawer (240px vs 340px desktop) */
+  /* Ticker items: scale down to fit shorter drawer (280px vs 340px desktop) */
   #main-site .ticker-row .ai { transform: scale(0.7) !important; }
   #main-site .ticker-row { gap: 8px !important; }
 
-  /* Row positions — tighter to fit within 240px box */
-  #main-site .ticker-row.r1 { top: 2px !important; }
-  #main-site .ticker-row.r2 { top: 88px !important; }
+  /* Row positions — shifted down 12px so row 1 has top breathing room
+     and row 2 has ~90px below it before drawer edge. Inter-row gap
+     preserved at 86px so the visual rhythm is unchanged. */
+  #main-site .ticker-row.r1 { top: 14px !important; }
+  #main-site .ticker-row.r2 { top: 100px !important; }
 
-  /* Tap hint — centered between scaled rows */
-  #main-site .drawer-tap-hint { top: 130px !important; font-size: 12px !important; }
+  /* Tap hint — shifted down 12px in lockstep with the rows to stay
+     positioned correctly between them. */
+  #main-site .drawer-tap-hint { top: 142px !important; font-size: 12px !important; }
 
   /* D-header: allow wrapping, tighten font */
   #main-site .d-header { white-space: normal !important; width: 88% !important; text-align: center !important; }
@@ -4982,12 +4989,14 @@ footer {
   z-index: 4;
 }
 .jp-reel-playpause svg { width: 24px; height: 24px; fill: #fff; margin-left: 3px; }
-.jp-reel.is-paused .jp-reel-playpause {
+.jp-reel.is-paused .jp-reel-playpause,
+.jp-gif-reel.is-paused .jp-reel-playpause {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
 /* brief flash of play icon when unpausing */
-.jp-reel.play-flash .jp-reel-playpause {
+.jp-reel.play-flash .jp-reel-playpause,
+.jp-gif-reel.play-flash .jp-reel-playpause {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.1);
 }
@@ -5993,7 +6002,21 @@ body {
     height: auto !important;
     overflow-y: visible !important;
   }
-  nav { opacity: 1 !important; }
+  /* Force nav into view on mobile — base rule is translateY(-100%)
+     and is only reset by JS adding nav.visible. If JS hiccups, this
+     guarantees the hamburger is reachable. */
+  nav {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  /* Force .reveal elements visible on mobile — desktop relies on
+     IntersectionObserver to fade them in, but mobile viewport math
+     can be flaky and these reveals are barely perceptible on a phone
+     anyway. Also acts as a safety net if JS fails to initialize. */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 #intro-stage {
@@ -6476,7 +6499,7 @@ nav.visible {
 ───────────────────────────────────────────── */
 .contact-section {
   position: relative;
-  padding: 100px 0 80px;
+  padding: 60px 0 50px;
   overflow: hidden;
   border-top: 1px solid rgba(139,90,60,0.15);
   /* manila base + ruled lines + red margin line — all in one background stack */
@@ -6512,7 +6535,7 @@ nav.visible {
 /* header */
 .contact-header {
   text-align: center;
-  margin-bottom: 52px;
+  margin-bottom: 32px;
 }
 
 .contact-eyebrow {
@@ -6722,7 +6745,7 @@ nav.visible {
   font-size: 15px;
   color: var(--ink-light);
   opacity: 0.55;
-  margin-top: 56px;
+  margin-top: 32px;
   letter-spacing: 1px;
 }
 
@@ -7636,7 +7659,7 @@ nav.visible {
           <span class="pol-tag">Europe</span>
         </div>
         <div class="pol-caption-area">
-          <div class="pol-caption-title">Tomorrowland Forever</div>
+          <div class="pol-caption-title">Tomorrowland: Tickets, Logistics, My Experience</div>
           <div class="pol-caption-year">2024</div>
         </div>
       </div>
@@ -8961,6 +8984,8 @@ nav.visible {
     </div>
 
     <form class="contact-form reveal" action="https://formspree.io/f/mjgpqgej" method="POST">
+      <!-- Honeypot field — hidden from humans, catches bots -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <div class="cf-tape"></div>
       <div class="cf-row">
         <div class="cf-group">
@@ -9203,7 +9228,7 @@ nav.visible {
       <div class="jp-title-block">
         <div class="jp-eyebrow">Featured Adventure</div>
         <h1 class="jp-title">Yacht Week: Worth It?</h1>
-        <div class="jp-subtitle">My full breakdown of the Croatia route — day by day, with tips and real costs.</div>
+        <div class="jp-subtitle">My full breakdown of the Croatia route — day by day, with real costs & booking tips.</div>
         <div class="jp-meta"><span>Avanti</span><span>·</span><span>June 2023</span><span>·</span><span>18 min read</span></div>
       </div>
       <div class="jp-body">
@@ -9448,7 +9473,7 @@ nav.visible {
     <div class="jp-content">
       <div class="jp-title-block">
         <div class="jp-eyebrow">Featured Adventure</div>
-        <h1 class="jp-title">Biking in Baños</h1>
+        <h1 class="jp-title">I Almost Died Solo Biking in Baños</h1>
         <div class="jp-subtitle">The Ruta de las Cascadas, a pitch-black tunnel, and the beauty of looking where you never thought to look.</div>
         <div class="jp-meta"><span>Avanti</span><span>·</span><span>2023</span><span>·</span><span>14 min read</span></div>
       </div>
@@ -9715,7 +9740,7 @@ nav.visible {
     <div class="jp-content">
       <div class="jp-title-block">
         <div class="jp-eyebrow">Featured Adventure</div>
-        <h1 class="jp-title">Havasupai: Worth Every Step</h1>
+        <h1 class="jp-title">Chasing Waterfalls in Havasupai</h1>
         <div class="jp-subtitle">Turquoise water, red rock cliffs, a 4am hike, and canyon dogs that knew the path better than we did.</div>
         <div class="jp-meta"><span>Avanti</span><span>·</span><span>August 2024</span><span>·</span><span>15 min read</span></div>
       </div>
@@ -9774,7 +9799,7 @@ nav.visible {
 
           <p>Of course, because it was my first camping trip, we forgot one tiny thing: the rain fly. Cue a sudden downpour that soaked all our stuff. Rookie mistake. Luckily, it passed quickly, and we dried things out while cooking dinner. That night, we hiked back to the falls under the stars. Honestly? Magical.</p>
 
-          <p>Sleeping in a tent wasn't bad either — I was so exhausted, I knocked out. Plus, unzipping the cover and seeing a sky full of stars? Unreal.</p>
+          <p>Sleeping in a tent wasn't bad either — I was so exhausted, I knocked out. Plus, unzipping the cover and seeing a sky full of stars was soothing.</p>
 
           <div class="jp-media landscape jp-gif-reel" style="margin: 24px 0;">
             <video src="stories/Havasu/day_1.5.mp4" autoplay muted loop playsinline></video>
@@ -9823,7 +9848,7 @@ nav.visible {
             <div class="jp-media jp-gif-reel"><video src="stories/Havasu/night_2.mp4" autoplay muted loop playsinline></video></div>
           </div>
           <div class="jp-photo-row" style="grid-template-columns: 1fr 1fr; margin: 0 0 24px;">
-            <div class="jp-media"><video src="stories/Havasu/night_3.mp4" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video></div>
+            <div class="jp-media jp-gif-reel"><video src="stories/Havasu/night_3.mp4" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video></div>
             <div class="jp-media"><img src="stories/Havasu/night_4.jpg" alt="Canyon at dawn"></div>
           </div>
         </div>
@@ -9862,7 +9887,7 @@ nav.visible {
       <div class="jp-title-block">
         <div class="jp-eyebrow">Featured Adventure</div>
         <h1 class="jp-title">Tomorrowland: Tickets, Logistics, My Experience</h1>
-        <div class="jp-subtitle">Tickets, logistics, and why I moshed in Tevas and would do it all again.</div>
+        <div class="jp-subtitle">How to actually get tickets, what it costs, and why I ended up moshing in Tevas.</div>
         <div class="jp-meta"><span>Avanti</span><span>·</span><span>July 2024</span><span>·</span><span>16 min read</span></div>
       </div>
       <div class="jp-body">
@@ -10091,7 +10116,6 @@ nav.visible {
   <!-- Top nav bar — brand link to return home -->
   <div class="as-nav" style="position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:14px 24px 10px;background:linear-gradient(to bottom, var(--paper, #F2EBD9) 60%, transparent);">
     <a href="#" class="as-home-link" onclick="document.getElementById('as-overlay').classList.remove('open');document.documentElement.scrollTop=0;document.body.scrollTop=0;return false;" style="font-family:'Caveat',cursive;font-size:20px;font-weight:700;color:#2C1A0E;text-decoration:none;letter-spacing:0.3px;transition:opacity 0.2s;">a <span style="color:var(--terracotta,#C4623A);">vyza</span> ventures</a>
-    <button onclick="document.getElementById('as-overlay').classList.remove('open');" style="background:none;border:none;font-size:22px;color:var(--ink, #2C1A0E);cursor:pointer;opacity:0.5;padding:4px 8px;transition:opacity 0.2s;" aria-label="Close">✕</button>
   </div>
   <div class="as-header">
     <div class="as-eyebrow">the travel journal</div>
@@ -10132,7 +10156,7 @@ nav.visible {
           <span class="as-entry-pill">vienna</span>
         </div>
         <div class="as-entry-title">Mishaps of a 20-Year-Old Traveller</div>
-        <div class="as-entry-desc">Laptop stolen in Copenhagen, purse snatched in Paris, embassy closed on a Sunday. A tale from my youth I'm both proud of and slightly embarrassed by.</div>
+        <div class="as-entry-desc">A tale from my youth that I'm both proud of and slightly embarrassed by.</div>
         <div class="as-entry-meta">December 2016 · 12 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
@@ -10149,7 +10173,7 @@ nav.visible {
           <span class="as-entry-pill">budget tips</span>
         </div>
         <div class="as-entry-title">Yacht Week: Worth It?</div>
-        <div class="as-entry-desc">The full breakdown of the Croatia route — day by day, with real costs, booking tips, and whether $3,200 was actually worth it.</div>
+        <div class="as-entry-desc">My full breakdown of the Croatia route — day by day, with real costs & booking tips.</div>
         <div class="as-entry-meta">June 2023 · 18 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
@@ -10166,7 +10190,7 @@ nav.visible {
           <span class="as-entry-pill">waterfalls</span>
         </div>
         <div class="as-entry-title">I Almost Died Solo Biking in Baños</div>
-        <div class="as-entry-desc">The Ruta de las Cascadas, a pitch-black tunnel with two-way traffic, and the beauty of looking where you never thought to look.</div>
+        <div class="as-entry-desc">The Ruta de las Cascadas, a pitch-black tunnel, and the beauty of looking where you never thought to look.</div>
         <div class="as-entry-meta">2023 · 14 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
@@ -10183,7 +10207,7 @@ nav.visible {
           <span class="as-entry-pill">waterfalls</span>
         </div>
         <div class="as-entry-title">Chasing Waterfalls in Havasupai</div>
-        <div class="as-entry-desc">Turquoise water, red rock cliffs, a 4am hike, canyon dogs that knew the path better than we did, and sleeping under the stars.</div>
+        <div class="as-entry-desc">Turquoise water, red rock cliffs, a 4am hike, and canyon dogs that knew the path better than we did.</div>
         <div class="as-entry-meta">August 2024 · 15 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
@@ -10199,8 +10223,8 @@ nav.visible {
           <span class="as-entry-pill">belgium</span>
           <span class="as-entry-pill">budget tips</span>
         </div>
-        <div class="as-entry-title">Tomorrowland Forever</div>
-        <div class="as-entry-desc">Tickets, logistics, 12+ stages, moshing in Tevas during DJ Diesel, and why I'm already going back.</div>
+        <div class="as-entry-title">Tomorrowland: Tickets, Logistics, My Experience</div>
+        <div class="as-entry-desc">How to actually get tickets, what it costs, and why I ended up moshing in Tevas.</div>
         <div class="as-entry-meta">July 2024 · 16 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
@@ -10218,7 +10242,7 @@ nav.visible {
           <span class="as-entry-pill">travel advice</span>
         </div>
         <div class="as-entry-title">Unplanned & Unforgettable</div>
-        <div class="as-entry-desc">Why traveling without a plan has led me to some of the most rewarding experiences of my life — from Albania to Buenos Aires tattoos.</div>
+        <div class="as-entry-desc">Why traveling without a plan has led me to some of the most rewarding experiences of my life.</div>
         <div class="as-entry-meta">2023 · 10 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
@@ -10367,6 +10391,64 @@ function skipIntro() {
   }, { once: true });
 })();
 
+/* ── Lazy-load background images — defined at top level so it's callable
+   from both the mobile (if) branch and the desktop (else) ScrollTrigger.
+   Was previously nested inside the else block; on mobile, Annex B
+   semantics meant the outer binding stayed undefined, so calling it
+   from the if branch threw a TypeError and halted the entire script. */
+function lazyLoadImages() {
+  document.querySelectorAll('[data-bg]').forEach(function(el) {
+    var src = el.getAttribute('data-bg');
+    if (src) {
+      el.style.backgroundImage = "url('" + src + "')";
+      el.style.backgroundSize = 'cover';
+      if (!el.style.backgroundPosition) {
+        el.style.backgroundPosition = el.getAttribute('data-bg-pos') || 'center';
+      }
+      el.removeAttribute('data-bg');
+    }
+  });
+}
+
+/* ── Same fix — triggerTransition was nested inside the else block,
+   so calling it from the mobile if branch was a no-op (TypeError).
+   Now declared at top level. Behavior identical to before. */
+function triggerTransition() {
+  /* visibility:hidden → visible has zero layout cost (no reflow),
+     keeping the transition as smooth as v27. The animation-play-state
+     CSS rule already paused all #main-site animations during intro. */
+  mainSite.style.visibility    = 'visible';
+  mainSite.style.pointerEvents = 'auto';
+  mainSite.classList.add('is-active'); /* unpause CSS animations */
+
+  navEl.classList.add('visible');
+  initReveal();
+  lazyLoadImages();
+
+  gsap.to(mainSite, {
+    opacity: 1,
+    duration: 0.04,
+    ease: 'none',
+    onComplete: function() {
+      document.getElementById('intro-section').style.display = 'none';
+      stage.style.display = 'none';
+      mainSite.scrollTop = 0;
+      mainSite.style.position  = 'relative';
+      mainSite.style.height    = 'auto';
+      mainSite.style.overflowY = 'visible';
+      window.scrollTo(0, 0);
+      lenis.scrollTo(0, { immediate: true });
+      lenis.resize();
+      ScrollTrigger.refresh();
+      initDrawerSystem();
+      initShimmerEffect();
+      buildHotelClones();
+      updateArrows();
+      initCursorSystem();
+    }
+  });
+}
+
 /* ── MOBILE: skip scroll-driven intro, show site directly ── */
 if (window.innerWidth <= 720) {
   transitioned = true;
@@ -10447,57 +10529,9 @@ tl.to(manila, {
 /* Glow fades mid-zoom */
 tl.to(stageGlow, { opacity: 0, duration: 0.18 }, 0.35);
 
-/* Lazy-load background images — called after transition so
-   image decoding doesn't compete with the book animation */
-function lazyLoadImages() {
-  document.querySelectorAll('[data-bg]').forEach(function(el) {
-    var src = el.getAttribute('data-bg');
-    if (src) {
-      el.style.backgroundImage = "url('" + src + "')";
-      el.style.backgroundSize = 'cover';
-      if (!el.style.backgroundPosition) {
-        el.style.backgroundPosition = el.getAttribute('data-bg-pos') || 'center';
-      }
-      el.removeAttribute('data-bg');
-    }
-  });
-}
-
-function triggerTransition() {
-  /* visibility:hidden → visible has zero layout cost (no reflow),
-     keeping the transition as smooth as v27. The animation-play-state
-     CSS rule already paused all #main-site animations during intro. */
-  mainSite.style.visibility    = 'visible';
-  mainSite.style.pointerEvents = 'auto';
-  mainSite.classList.add('is-active'); /* unpause CSS animations */
-
-  navEl.classList.add('visible');
-  initReveal();
-  lazyLoadImages();
-
-  gsap.to(mainSite, {
-    opacity: 1,
-    duration: 0.04,
-    ease: 'none',
-    onComplete: function() {
-      document.getElementById('intro-section').style.display = 'none';
-      stage.style.display = 'none';
-      mainSite.scrollTop = 0;
-      mainSite.style.position  = 'relative';
-      mainSite.style.height    = 'auto';
-      mainSite.style.overflowY = 'visible';
-      window.scrollTo(0, 0);
-      lenis.scrollTo(0, { immediate: true });
-      lenis.resize();
-      ScrollTrigger.refresh();
-      initDrawerSystem();
-      initShimmerEffect();
-      buildHotelClones();
-      updateArrows();
-      initCursorSystem();
-    }
-  });
-}
+/* Note: lazyLoadImages and triggerTransition were moved out of this
+   else block to top-level script scope (above the mobile if/else)
+   so they're callable from the mobile branch. See comment block above. */
 
 window.addEventListener('resize', function() {
   if (!transitioned) ScrollTrigger.refresh();
@@ -10578,6 +10612,9 @@ function initJournalVideos() {
     hint.textContent = 'tap for sound';
     wrap.appendChild(hint);
 
+    // Track whether sound has been turned on before (so restart only happens once)
+    var hasUnmuted = false;
+
     // Update volume icon based on mute state
     var volIcon = wrap.querySelector('.jp-reel-icon');
     function updateVolIcon() {
@@ -10591,8 +10628,8 @@ function initJournalVideos() {
     updateVolIcon();
 
     function unmute() {
-      // audioTracks API returns 0 at loadedmetadata time even on videos that have
-      // audio — unreliable for detection. Just unmute and let the browser handle it.
+      // Restart from beginning only on first unmute so vlogs make sense from the start
+      if (!hasUnmuted) { video.currentTime = 0; hasUnmuted = true; }
       video.muted = false;
       video.volume = 1.0;
       if (video.paused) {
@@ -10661,6 +10698,12 @@ function initJournalVideos() {
     var video = wrap.querySelector('video');
     if (!video) return;
 
+    // Play/pause overlay
+    var ppBtn = document.createElement('div');
+    ppBtn.className = 'jp-reel-playpause';
+    ppBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+    wrap.appendChild(ppBtn);
+
     var sndBtn = document.createElement('button');
     sndBtn.className = 'jp-d4-sound-btn';
     sndBtn.setAttribute('type', 'button');
@@ -10676,12 +10719,37 @@ function initJournalVideos() {
       hint.style.opacity = video.muted ? '1' : '0';
     }
 
+    // Sound button: restart from beginning only on first unmute
+    var hasUnmuted = false;
     sndBtn.addEventListener('click', function(e) {
       e.stopPropagation();
-      video.muted = !video.muted;
-      video.volume = 1.0;
+      if (video.muted) {
+        if (!hasUnmuted) { video.currentTime = 0; hasUnmuted = true; }
+        video.muted = false;
+        video.volume = 1.0;
+        if (video.paused) video.play().catch(function(){});
+        wrap.classList.remove('is-paused');
+      } else {
+        video.muted = true;
+      }
       updateIcon();
     });
+
+    // Click wrap to play/pause
+    wrap.addEventListener('click', function(e) {
+      if (e.target.closest('.jp-d4-sound-btn')) return;
+      e.preventDefault();
+      if (video.paused) {
+        video.play().catch(function(){});
+        wrap.classList.remove('is-paused');
+      } else {
+        video.pause();
+        wrap.classList.add('is-paused');
+      }
+    });
+
+    video.addEventListener('pause', function() { wrap.classList.add('is-paused'); });
+    video.addEventListener('play', function() { wrap.classList.remove('is-paused'); });
 
     wrap.appendChild(sndBtn);
     wrap.appendChild(hint);
@@ -11117,6 +11185,10 @@ function initDrawerSystem() {
     gsap.to(dHandle, { top: 12, duration: 0.8, ease: 'power2.inOut' });
     gsap.to(hStrip, { opacity: 0, duration: 0.2 });
     gsap.to(dH, { opacity: 0, duration: 0.2 });
+    // Hide hint so it doesn't show through the closed drawer
+    if (drawerTapHint && !drawerTapHint.dataset.dismissed) {
+      drawerTapHint.classList.remove('visible');
+    }
   }
 
   ScrollTrigger.create({

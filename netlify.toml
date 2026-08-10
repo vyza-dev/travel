@@ -5,8 +5,11 @@
   for = "/*"
   [headers.values]
 
-    # Prevent clickjacking — only allow this page to be framed by itself
-    X-Frame-Options = "SAMEORIGIN"
+    # Enforce HTTPS — browsers will never fall back to HTTP after visiting once
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+    # Prevent clickjacking — no one can embed this site in an iframe
+    X-Frame-Options = "DENY"
 
     # Prevent MIME-type sniffing
     X-Content-Type-Options = "nosniff"
@@ -17,9 +20,16 @@
     # Disable browser features not needed by the site
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
 
+    # Protect against cross-window Spectre-class attacks
+    Cross-Origin-Opener-Policy = "same-origin"
+
+    # Prevent cross-origin resource theft
+    Cross-Origin-Resource-Policy = "same-origin"
+
     # Content Security Policy
     # Note: 'unsafe-inline' is required because the site uses inline <script> and <style> blocks.
     # If you ever migrate to external JS/CSS files, remove 'unsafe-inline' for a stricter policy.
+    # frame-ancestors 'none' replaces X-Frame-Options for modern browsers (belt-and-suspenders).
     Content-Security-Policy = """
       default-src 'self';
       script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'unsafe-inline';
@@ -28,6 +38,7 @@
       img-src 'self' data: https:;
       connect-src 'self' https://formspree.io;
       frame-src 'none';
+      frame-ancestors 'none';
       object-src 'none';
       base-uri 'self';
       form-action 'self' https://formspree.io;
@@ -37,6 +48,13 @@
     Access-Control-Allow-Origin = "https://avyzaventures.netlify.app"
     Access-Control-Allow-Methods = "GET, POST"
     Access-Control-Allow-Headers = "Content-Type"
+
+# ── Preview/branch deploys — block search engine indexing ───────────────────
+[context.deploy-preview.headers]
+  X-Robots-Tag = "noindex, nofollow"
+
+[context.branch-deploy.headers]
+  X-Robots-Tag = "noindex, nofollow"
 
 # ── Cache static assets aggressively, HTML never cached ─────────────────────
 [[headers]]
