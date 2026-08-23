@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Almost Died Solo Biking in Baños — A Vyza Ventures</title>
+<meta name="description" content="A solo bike ride down Ecuador's Ruta de las Cascadas that turned dangerous fast — waterfalls, tunnels, and the day I almost didn't make it home.">
+<link rel="canonical" href="https://avyzaventures.netlify.app/stories/banos">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta name="p:domain_verify" content="47c4046286177f1d9a5b3bf910f4a976"/>
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://avyzaventures.netlify.app/stories/banos">
+<meta property="og:title" content="I Almost Died Solo Biking in Baños — A Vyza Ventures">
+<meta property="og:description" content="A solo bike ride down Ecuador's Ruta de las Cascadas that turned dangerous fast — waterfalls, tunnels, and the day I almost didn't make it home.">
+<meta property="og:image" content="https://avyzaventures.netlify.app/stories/banos.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:author" content="Avanti Vyza">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="I Almost Died Solo Biking in Baños — A Vyza Ventures">
+<meta name="twitter:description" content="A solo bike ride down Ecuador's Ruta de las Cascadas that turned dangerous fast — waterfalls, tunnels, and the day I almost didn't make it home.">
+<meta name="twitter:image" content="https://avyzaventures.netlify.app/stories/banos.jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Caveat:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "I Almost Died Solo Biking in Baños",
+  "description": "A solo bike ride down Ecuador's Ruta de las Cascadas that turned dangerous fast — waterfalls, tunnels, and the day I almost didn't make it home.",
+  "image": "https://avyzaventures.netlify.app/stories/banos.jpeg",
+  "author": {"@type": "Person", "name": "Avanti Vyza", "url": "https://avyzaventures.netlify.app/"},
+  "publisher": {"@type": "Person", "name": "Avanti Vyza"},
+  "mainEntityOfPage": "https://avyzaventures.netlify.app/stories/banos"
+}
+</script>
+
+<style>
+:root {
+  --paper: #F2EBD9;
+  --paper-dark: #E8DCC8;
+  --paper-aged: #DDD0B8;
+  --ink: #2C1A0E;
+  --ink-mid: #5C3D2E;
+  --ink-light: #8B6650;
+  --red: #B83232;
+  --terracotta: #C4623A;
+  --sage: #6B7C5A;
+  --mustard: #C9963A;
+  --tape: rgba(210,195,155,0.7);
+  --shadow: rgba(44,26,14,0.15);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: 'Lora', serif;
+  background: #F2EBD9;
+  color: #2C1A0E;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+/* Un-modal the .jp-post so it renders standalone */
+.jp-post { display: block !important; opacity: 1 !important; }
+
+.jp-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 600;
+  background: var(--paper, #F2EBD9);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform: translateY(100%);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  -webkit-overflow-scrolling: touch;
+  pointer-events: none;
+  cursor: default !important;
+}
+.jp-overlay.open {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* close bar */
+.jp-close-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(193, 122, 80, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 14px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(193, 122, 80, 0.22);
+}
+.jp-back {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: var(--ink);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+  font-weight: 700;
+}
+.jp-back:hover { color: var(--terracotta); }
+.jp-back-arrow { font-size: 22px; }
+.jp-nav-title {
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  color: var(--ink-light);
+  opacity: 0.6;
+}
+/* X close button — fixed to viewport, OUTSIDE overlay to avoid transform issues */
+#jp-fixed-close {
+  position: fixed;
+  top: 72px; right: 28px;
+  z-index: 9999;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(193, 122, 80, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: #fff;
+  transition: background 0.2s, transform 0.2s;
+}
+#jp-fixed-close.visible { display: flex; }
+#jp-fixed-close:hover {
+  background: rgba(193, 122, 80, 1);
+  transform: scale(1.08);
+}
+#as-fixed-close {
+  position: fixed;
+  top: 72px; right: 28px;
+  z-index: 9999;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(193, 122, 80, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: #fff;
+  transition: background 0.2s, transform 0.2s;
+}
+#as-fixed-close.visible { display: flex; }
+#as-fixed-close:hover {
+  background: rgba(193, 122, 80, 1);
+  transform: scale(1.06);
+}
+
+/* hero banner */
+.jp-hero {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  min-height: 360px;
+  background: var(--paper-dark);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jp-hero-placeholder {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(44,26,14,0.08);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.jp-hero-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(to top, var(--paper), transparent);
+}
+.jp-hero-tag {
+  position: absolute;
+  top: 24px; left: 32px;
+  background: var(--terracotta);
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 2px;
+  transform: rotate(2deg);
+}
+
+/* content column */
+.jp-content {
+  max-width: 980px;
+  margin: -80px auto 0;
+  padding: 0 56px 100px;
+  position: relative;
+  z-index: 2;
+}
+
+/* title block */
+.jp-title-block {
+  margin-bottom: 48px;
+  text-align: center;
+}
+.jp-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  color: var(--terracotta);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.jp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.jp-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: var(--ink-light);
+  line-height: 1.6;
+  font-style: italic;
+}
+.jp-meta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  color: var(--ink-light);
+  opacity: 0.6;
+}
+
+/* body prose */
+.jp-body p {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: var(--ink-mid);
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+.jp-body p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.jp-body p em {
+  color: var(--ink);
+}
+.jp-body ul, .jp-body ol {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  margin: 0 0 24px 0;
+  padding-left: 24px;
+}
+.jp-body ul li, .jp-body ol li {
+  margin-bottom: 6px;
+  color: var(--ink-mid);
+}
+.jp-body ul li:last-child, .jp-body ol li:last-child {
+  margin-bottom: 0;
+}
+/* When a paragraph leads directly into a list, close the gap so it reads as one block */
+.jp-body p + ul,
+.jp-body p + ol {
+  margin-top: -14px;
+}
+.jp-body ul li strong, .jp-body ol li strong {
+  color: var(--ink-mid);
+  font-weight: 700;
+}
+
+/* section dividers */
+.jp-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--ink);
+  opacity: 0.1;
+  margin: 40px auto;
+}
+.jp-divider-stars {
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: var(--ink-light);
+  opacity: 0.3;
+  margin: 40px 0;
+  letter-spacing: 8px;
+}
+
+/* pull quotes / margin notes */
+.jp-pullquote {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(22px, 2.8vw, 28px);
+  color: var(--terracotta);
+  text-align: center;
+  line-height: 1.45;
+  margin: 48px 0;
+  padding: 24px 40px;
+  position: relative;
+}
+.jp-pullquote::before,
+.jp-pullquote::after {
+  content: '';
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  width: 50px; height: 1.5px;
+  background: var(--terracotta);
+  opacity: 0.25;
+}
+.jp-pullquote::before { top: 0; }
+.jp-pullquote::after { bottom: 0; }
+
+/* margin note (handwritten aside) */
+.jp-margin-note {
+  background: #FFF8E1;
+  border-left: 3px solid var(--mustard);
+  padding: 16px 20px;
+  margin: 32px 0;
+  border-radius: 0 3px 3px 0;
+  position: relative;
+}
+.jp-margin-note::before {
+  content: 'note:';
+  font-family: 'Caveat', cursive;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--mustard);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+.jp-margin-note p {
+  font-family: 'Caveat', cursive !important;
+  font-size: 15px !important;
+  color: var(--ink-mid) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 0 !important;
+}
+
+/* pro tip callout */
+.jp-protip {
+  background: rgba(107, 124, 90, 0.08);
+  border-left: 3px solid var(--sage);
+  padding: 16px 20px;
+  margin: 32px 0;
+  border-radius: 0 3px 3px 0;
+}
+.jp-protip::before {
+  content: 'pro tip:';
+  font-family: 'Caveat', cursive;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+.jp-protip p {
+  font-family: 'Caveat', cursive !important;
+  font-size: 15px !important;
+  color: var(--ink-mid) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 0 !important;
+}
+
+/* photo placeholders */
+.jp-photo {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: var(--paper-dark);
+  border-radius: 3px;
+  margin: 36px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.1);
+}
+.jp-photo-label {
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  color: var(--ink-light);
+  opacity: 0.4;
+  text-align: center;
+}
+.jp-photo.portrait { aspect-ratio: 3/4; max-width: 400px; margin-left: auto; margin-right: auto; }
+.jp-photo.square { aspect-ratio: 1; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+/* photo grid (2-up or 3-up) */
+.jp-photo-grid {
+  display: grid;
+  gap: 16px;
+  margin: 36px 0;
+}
+.jp-photo-grid.two-up { grid-template-columns: 1fr 1fr; }
+.jp-photo-grid.three-up { grid-template-columns: 1fr 1fr 1fr; }
+.jp-photo-grid .jp-photo { margin: 0; aspect-ratio: 1; }
+
+/* video placeholder */
+.jp-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #2C1A0E;
+  border-radius: 3px;
+  margin: 36px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.15);
+}
+.jp-video-play {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: rgba(242, 235, 217, 0.15);
+  border: 2px solid rgba(242, 235, 217, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jp-video-play::after {
+  content: '';
+  width: 0; height: 0;
+  border-left: 18px solid rgba(242, 235, 217, 0.6);
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  margin-left: 4px;
+}
+.jp-video-label {
+  position: absolute;
+  bottom: 14px; left: 18px;
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  color: rgba(242, 235, 217, 0.4);
+}
+
+/* ── wrapped magazine-style media (floats with text wrapping) ── */
+.jp-media {
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.12);
+  background: var(--paper-dark);
+  position: relative;
+}
+.jp-media img,
+.jp-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* float-right: image sits on the right, text wraps on left */
+.jp-media.float-right {
+  float: right;
+  width: 46%;
+  margin: 6px 0 18px 28px;
+  shape-outside: margin-box;
+}
+/* float-left: image sits on the left, text wraps on right */
+.jp-media.float-left {
+  float: left;
+  width: 46%;
+  margin: 6px 28px 18px 0;
+  shape-outside: margin-box;
+}
+/* aspect ratios */
+.jp-media.portrait { aspect-ratio: 3/4; }
+.jp-media.landscape { aspect-ratio: 4/3; }
+.jp-media.square { aspect-ratio: 1; }
+.jp-media.tall { aspect-ratio: 9/16; }
+/* a small stack of two photos in a single floated column */
+.jp-media-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.jp-media-stack.float-right {
+  float: right;
+  width: 42%;
+  margin: 6px 0 18px 28px;
+}
+.jp-media-stack.float-left {
+  float: left;
+  width: 42%;
+  margin: 6px 28px 18px 0;
+}
+.jp-media-stack .jp-media {
+  width: 100%;
+  margin: 0;
+  float: none;
+}
+.jp-media-stack .jp-media.portrait { aspect-ratio: 3/4; }
+.jp-media-stack .jp-media.landscape { aspect-ratio: 4/3; }
+
+/* mid-section header strip (for top of an article — multiple photos in a band) */
+.jp-header-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+  margin: 0 0 28px 0;
+  height: 200px;
+}
+.jp-header-strip .jp-media {
+  margin: 0;
+  float: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* title block with a header image alongside (magazine cover layout) */
+.jp-title-with-header {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 36px;
+  align-items: end;
+  margin: 0 0 56px 0;
+}
+.jp-title-with-header .jp-title-block {
+  margin: 0;
+}
+.jp-title-with-header .jp-header-photo {
+  width: 100%;
+  aspect-ratio: 1.68/1;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 6px 8px 24px rgba(44,26,14,0.18);
+  transform: rotate(1.5deg);
+}
+.jp-title-with-header .jp-header-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 720px) {
+  .jp-title-with-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .jp-title-with-header .jp-header-photo {
+    transform: none;
+  }
+}
+
+/* clearfix wrappers — use after a section that floated media to break the flow before the next section */
+.jp-clear { clear: both; }
+
+/* native browser-controlled video (Day 4) — completely isolated from jp-media */
+.jp-video-block {
+  float: left;
+  width: 42%;
+  margin: 6px 28px 18px 0;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.12);
+  background: #000;
+  line-height: 0;
+  position: relative;
+}
+/* Cap height so portrait videos don't push text below them */
+#jp-day4-video-slot {
+  height: 400px;
+}
+#jp-banos-diablo-slot {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+}
+.jp-video-block video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Custom Day 4 player controls */
+.jp-d4-sound-btn {
+  position: absolute;
+  bottom: 12px; right: 12px;
+  width: 36px; height: 36px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.jp-d4-sound-btn:hover { background: rgba(0,0,0,0.82); transform: scale(1.08); }
+.jp-d4-sound-btn svg { width: 18px; height: 18px; fill: currentColor; pointer-events: none; }
+
+.jp-d4-pp {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px; height: 52px;
+  background: rgba(0,0,0,0.52);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 50%;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none; /* video click handles play/pause */
+  z-index: 5;
+}
+.jp-d4-pp svg { width: 26px; height: 26px; fill: currentColor; }
+
+.jp-d4-hint {
+  position: absolute;
+  bottom: 14px; left: 12px;
+  font-family: 'Caveat', cursive;
+  font-size: 13px;
+  color: rgba(255,255,255,0.82);
+  background: rgba(0,0,0,0.42);
+  padding: 3px 9px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.4s;
+}
+
+/* silent GIF-style reel — no controls, just loops */
+.jp-gif-reel {
+  position: relative;
+  overflow: hidden;
+}
+.jp-gif-reel video {
+  pointer-events: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* video reel — autoplay muted, click to unmute/play/pause */
+.jp-reel {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.jp-reel video {
+  pointer-events: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom-right: volume icon */
+.jp-reel-icon {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  z-index: 5;
+}
+.jp-reel-icon svg { width: 16px; height: 16px; fill: #fff; }
+.jp-reel-icon:hover { background: rgba(0,0,0,0.8); transform: scale(1.1); }
+
+/* Centre: play/pause indicator (shows when paused) */
+.jp-reel-playpause {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 4;
+}
+.jp-reel-playpause svg { width: 24px; height: 24px; fill: #fff; margin-left: 3px; }
+.jp-reel.is-paused .jp-reel-playpause,
+.jp-gif-reel.is-paused .jp-reel-playpause {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+/* brief flash of play icon when unpausing */
+.jp-reel.play-flash .jp-reel-playpause,
+.jp-gif-reel.play-flash .jp-reel-playpause {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+/* Player mode (Day 4) — larger button, always visible before first play */
+.jp-reel-player.is-paused .jp-reel-playpause {
+  width: 72px; height: 72px;
+}
+.jp-reel-player.is-paused .jp-reel-playpause svg {
+  width: 32px; height: 32px;
+}
+/* Dim overlay so the play button reads clearly before video starts */
+.jp-reel-player.is-paused::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Bottom-left: expand button */
+.jp-reel-expand {
+  position: absolute;
+  bottom: 10px; left: 10px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s, transform 0.15s;
+}
+.jp-reel-expand svg { width: 14px; height: 14px; fill: #fff; }
+.jp-reel-expand:hover { background: rgba(0,0,0,0.8); transform: scale(1.1); }
+.jp-reel:hover .jp-reel-expand { opacity: 1; }
+
+/* Muted indicator overlay (first-visit hint) */
+.jp-reel-muted-hint {
+  position: absolute;
+  bottom: 48px; right: 8px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-family: 'Lora', serif;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  z-index: 5;
+}
+.jp-reel:hover .jp-reel-muted-hint { opacity: 1; }
+
+/* Photo hover tilt (non-reel media) */
+.jp-media:not(.jp-reel) {
+  transition: transform 0.35s cubic-bezier(0.34, 1.2, 0.64, 1),
+              box-shadow 0.35s ease;
+}
+.jp-media:not(.jp-reel):hover {
+  transform: rotate(0deg) scale(1.035);
+  box-shadow: 8px 14px 32px rgba(44,26,14,0.28);
+  z-index: 20;
+}
+.jp-scatter-wrap .jp-media:hover {
+  z-index: 20;
+}
+
+/* PDF-style inline photo row — full-width grid between paragraphs */
+.jp-photo-row {
+  display: grid;
+  grid-template-columns: 1fr 0.68fr 1fr;
+  gap: 10px;
+  margin: 28px 0;
+  align-items: stretch;
+}
+.jp-photo-row .jp-media {
+  margin: 0;
+  float: none;
+  width: 100%;
+  height: 210px;
+  aspect-ratio: auto;
+  transform: none;
+}
+.jp-photo-row .jp-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 720px) {
+  .jp-photo-row {
+    grid-template-columns: 1fr 1fr !important; /* inline style override needs !important */
+    gap: 8px;
+  }
+  .jp-photo-row .jp-media {
+    height: 160px;
+  }
+  .jp-photo-row .jp-media:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── signoff sparkles — scattered ✦ around lip stain ── */
+/* Stars are absolute inside .jp-kiss-wrap (position:relative, overflow:visible) */
+/* Each star starts at center of the kiss wrap (top:50%, left:50%) then scatters */
+.jp-kiss-wrap {
+  overflow: visible; /* let stars escape the 200×200 bounds */
+}
+.jp-star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  color: #6b1a2e;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translate(-50%, -50%) scale(0);
+}
+.jp-signoff.is-signed .jp-star-1 { animation: star1 1.1s cubic-bezier(0.2,0.8,0.4,1) 1.45s forwards; }
+.jp-signoff.is-signed .jp-star-2 { animation: star2 1.0s cubic-bezier(0.2,0.8,0.4,1) 1.55s forwards; }
+.jp-signoff.is-signed .jp-star-3 { animation: star3 0.95s cubic-bezier(0.2,0.8,0.4,1) 1.5s forwards; }
+.jp-signoff.is-signed .jp-star-4 { animation: star4 1.1s cubic-bezier(0.2,0.8,0.4,1) 1.6s forwards; }
+.jp-signoff.is-signed .jp-star-5 { animation: star5 0.9s cubic-bezier(0.2,0.8,0.4,1) 1.52s forwards; }
+.jp-signoff.is-signed .jp-star-6 { animation: star6 1.05s cubic-bezier(0.2,0.8,0.4,1) 1.48s forwards; }
+@keyframes star1 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% - 80px), calc(-50% - 64px)) scale(1.2); }
+}
+@keyframes star2 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% + 88px), calc(-50% - 52px)) scale(1.0); }
+}
+@keyframes star3 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% + 96px), calc(-50% + 36px)) scale(0.9); }
+}
+@keyframes star4 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% - 60px), calc(-50% + 78px)) scale(1.1); }
+}
+@keyframes star5 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% + 20px), calc(-50% - 90px)) scale(0.85); }
+}
+@keyframes star6 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% - 36px), calc(-50% + 84px)) scale(1.15); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jp-star { animation: none !important; }
+}
+
+/* Lightbox */
+.jp-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20,12,6,0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  padding: 40px;
+}
+.jp-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+.jp-lightbox-img {
+  max-width: min(92vw, 1400px);
+  max-height: 88vh;
+  object-fit: contain;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  border: 8px solid #fff;
+  border-radius: 2px;
+  transform: scale(0.92);
+  transition: transform 0.35s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+.jp-lightbox.is-open .jp-lightbox-img { transform: scale(1); }
+.jp-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.jp-lightbox-close:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.08);
+}
+
+/* Day section spacing — when a section floats media, add bottom padding so next day starts cleanly */
+.jp-day-section {
+  margin-top: 36px;
+}
+.jp-day-section::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Day scatter collage — used on Day 5 */
+.jp-day-scatter {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 44px;
+  margin-top: 36px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+.jp-day-scatter .jp-day-text { min-width: 0; }
+.jp-day-scatter .jp-day-heading { margin-top: 0; }
+.jp-scatter-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.92 / 1;
+}
+.jp-scatter-wrap .jp-media {
+  position: absolute;
+  margin: 0;
+  float: none;
+  box-shadow: 4px 10px 28px rgba(44,26,14,0.22);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, z-index 0s;
+}
+.jp-scatter-wrap .jp-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.jp-scatter-wrap .scatter-1 {
+  top: 0; left: 0;
+  width: 68%;
+  transform: rotate(-4deg);
+  z-index: 1;
+}
+.jp-scatter-wrap .scatter-2 {
+  top: 26%; right: 0;
+  width: 56%;
+  transform: rotate(5.5deg);
+  z-index: 2;
+}
+.jp-scatter-wrap .scatter-3 {
+  bottom: 0; left: 18%;
+  width: 64%;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+.jp-scatter-wrap .jp-media:hover {
+  z-index: 10;
+  transform: rotate(0deg) scale(1.04);
+  box-shadow: 6px 14px 36px rgba(44,26,14,0.32);
+}
+
+/* intro section: real two-column grid (no float, no text wrap under photo) */
+.jp-intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.jp-intro-text { display: flex; flex-direction: column; justify-content: center; }
+.jp-intro-text p { margin: 0 0 16px; }
+.jp-intro-text p:last-child { margin-bottom: 0; }
+.jp-media.jp-banner-photo {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  transform: rotate(1.2deg);
+  margin: 0;
+  float: none;
+  box-shadow: 6px 8px 24px rgba(44,26,14,0.18);
+}
+.jp-media.jp-banner-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* section headings (Pricing & Costs, Booking, Was It Worth It...) */
+.jp-section-heading {
+  font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 44px 0 22px;
+  color: var(--ink);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* day headings */
+.jp-day-heading {
+  font-family: 'Caveat', 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 14px;
+  color: var(--terracotta, #c17a50);
+  letter-spacing: 0.3px;
+}
+
+/* pro tips callout */
+.jp-pro-tips {
+  background: rgba(193, 122, 80, 0.10);
+  border-left: 3px solid rgba(193, 122, 80, 0.55);
+  padding: 18px 24px;
+  margin: 28px 0;
+  border-radius: 2px;
+  overflow: hidden; /* creates new block formatting context — stays clear of floated images */
+}
+.jp-pro-tips-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+.jp-pro-tips ul { margin: 0; padding-left: 20px; }
+.jp-pro-tips li { margin: 4px 0; }
+
+/* responsive: stack media below text on narrow screens */
+@media (max-width: 720px) {
+  .jp-content { padding: 0 24px 80px; }
+  .jp-media.float-right,
+  .jp-media.float-left,
+  .jp-media-stack.float-right,
+  .jp-media-stack.float-left,
+  .jp-media.jp-banner-photo {
+    float: none !important;
+    width: 100% !important; /* !important: inline style="width:46%" etc. would otherwise win */
+    margin: 24px 0;
+    transform: none;
+  }
+  .jp-intro-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .jp-media.jp-banner-photo {
+    aspect-ratio: 1.68/1;
+    height: auto;
+  }
+  .jp-section-heading { font-size: 26px; }
+  .jp-day-heading { font-size: 26px; }
+  .jp-header-strip {
+    height: 140px;
+  }
+  .jp-day-scatter {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .jp-scatter-wrap {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .jp-scatter-wrap .jp-media {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+  .jp-scatter-wrap .jp-media:hover {
+    transform: none;
+  }
+  .jp-video-block {
+    float: none;
+    width: 100%;
+    margin: 16px 0;
+  }
+  #jp-day4-video-slot,
+  #jp-banos-diablo-slot {
+    height: auto;
+    aspect-ratio: 9 / 16;
+  }
+
+  /* ── Baños entry: fix inline-styled layouts for mobile ── */
+
+  /* 3-photo row at top — inline style needs !important to yield to media query */
+  #jp-banos .jp-photo-row {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Tunnel intro: portrait img + text side-by-side → stack vertically */
+  #jp-banos .banos-tunnel-intro {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  #jp-banos .banos-tunnel-img {
+    flex: none !important;
+    width: 100% !important;
+  }
+
+  /* Tunnel grid: complex 3-col/2-row → simple linear stack */
+  #jp-banos .banos-tunnel-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  #jp-banos .banos-tunnel-grid > * {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    padding-top: 0 !important; /* remove the 110px offset on tunnel3 */
+  }
+
+  /* Regret arrow: points right (→) on desktop, rotate to point down (↓) on mobile */
+  #jp-banos .banos-regret-arrow {
+    transform: rotate(90deg);
+    transform-origin: center center;
+    vertical-align: middle;
+  }
+
+  /* Novia2 video: tiny float-right → full width block */
+  #jp-banos .banos-novia-vid {
+    float: none !important;
+    width: 100% !important;
+    clear: both;
+    margin: 16px 0 !important;
+  }
+
+  /* Diablo section: portrait video + photo grid side-by-side → stack */
+  #jp-banos .banos-diablo-layout {
+    flex-direction: column !important;
+  }
+  #jp-banos .banos-diablo-layout > *:first-child {
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important; /* landscape crop on mobile instead of 9:16 tall */
+  }
+
+  /* Machay side-by-side videos → stack */
+  #jp-banos .banos-machay-vids {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  #jp-banos .banos-machay-vids > * {
+    flex: none !important;
+    width: 100% !important;
+  }
+}
+
+/* lessons / takeaway box */
+.jp-lessons {
+  background: white;
+  border: 1.5px solid var(--paper-aged);
+  padding: 32px;
+  margin: 48px 0;
+  border-radius: 3px;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.08);
+  position: relative;
+}
+.jp-lessons::before {
+  content: '';
+  position: absolute;
+  top: -12px; left: 50%; transform: translateX(-50%);
+  width: 48px; height: 20px;
+  background: rgba(210,195,155,0.75);
+  border-radius: 2px;
+}
+.jp-lessons-title {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.jp-lessons ol {
+  list-style: none;
+  counter-reset: lessons;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.jp-lessons ol li {
+  counter-increment: lessons;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  padding-left: 32px;
+  position: relative;
+}
+.jp-lessons ol li::before {
+  content: counter(lessons) '.';
+  position: absolute;
+  left: 0;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--terracotta);
+  top: -2px;
+}
+
+/* ── journal sign-off — real lip stain + name centered inside ── */
+.jp-signoff {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 52px auto 8px;
+  width: fit-content;
+}
+.jp-kiss-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.jp-kiss {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.3, 0.64, 1);
+}
+.jp-signoff.is-signed .jp-kiss {
+  opacity: 0.55;
+  transform: scale(1);
+}
+.jp-signoff-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-9deg) scale(0.8);
+  transform-origin: center center;
+  font-family: 'Caveat', cursive;
+  font-size: 58px;
+  font-weight: 700;
+  color: #6b1a2e;
+  line-height: 1;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-shadow:
+    -0.5px -0.5px 0 rgba(255,248,232,0.85),
+     0.5px -0.5px 0 rgba(255,248,232,0.85),
+    -0.5px  0.5px 0 rgba(255,248,232,0.85),
+     0.5px  0.5px 0 rgba(255,248,232,0.85),
+     0    0   8px rgba(255,248,232,0.5);
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+}
+.jp-signoff.is-signed .jp-signoff-name {
+  animation: sign-draw 1.4s cubic-bezier(0.4, 0.0, 0.2, 1) 0.5s forwards;
+}
+@keyframes sign-draw {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    transform: translate(-50%, -50%) rotate(-15deg) scale(0.7);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  65% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(-50%, -50%) rotate(-5deg) scale(1.12);
+    opacity: 1;
+  }
+  82% {
+    transform: translate(-50%, -50%) rotate(-11deg) scale(0.97);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(-50%, -50%) rotate(-9deg) scale(1);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jp-kiss { opacity: 0.55; transform: none; transition: none; }
+  .jp-signoff-name { opacity: 1; clip-path: none; transform: translate(-50%, -50%) rotate(-9deg); animation: none; }
+}
+
+/* bottom nav */
+.jp-bottom-nav {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(44,26,14,0.08);
+  text-align: center;
+}
+.jp-bottom-back {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: var(--terracotta);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1.5px solid var(--terracotta);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+.jp-bottom-back:hover { opacity: 0.7; }
+
+
+
+/* Story-page CTAs */
+.story-cta-wrap { max-width: 720px; margin: 48px auto 80px; padding: 0 24px; text-align: center; }
+.story-cta-primary {
+  display: inline-block; background: #C17A50; color: #F2EBD9;
+  font-family: 'Caveat', cursive; font-size: 22px; font-weight: 700;
+  padding: 14px 32px; border-radius: 6px; text-decoration: none;
+  letter-spacing: 0.5px; box-shadow: 2px 4px 0 rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 40px;
+}
+.story-cta-primary:hover { transform: translateY(-2px); box-shadow: 2px 6px 0 rgba(0,0,0,0.2); }
+.story-related-block {
+  margin-top: 40px; padding: 32px 24px;
+  background: rgba(193, 122, 80, 0.06);
+  border: 1px dashed rgba(193, 122, 80, 0.3); border-radius: 8px;
+}
+.story-related-title { font-family: 'Caveat', cursive; font-size: 26px; color: #2C1A0E; margin-bottom: 8px; }
+.story-related-sub { font-family: 'Lora', serif; font-size: 14px; color: rgba(44,26,14,0.6); font-style: italic; }
+.story-back-home {
+  display: inline-block; margin-top: 32px;
+  font-family: 'Lora', serif; font-size: 15px;
+  color: rgba(44,26,14,0.7); text-decoration: none;
+  border-bottom: 1px solid rgba(44,26,14,0.3);
+}
+.story-back-home:hover { color: #C17A50; border-bottom-color: #C17A50; }
+</style>
+</head>
+<body>
+
+<div class="jp-close-bar" style="position:sticky;top:0;z-index:100;background:rgba(44,26,14,0.95);backdrop-filter:blur(12px);">
+  <a href="/" class="jp-back" style="text-decoration:none;"><span class="jp-back-arrow">←</span> back to a vyza ventures</a>
+  <div class="jp-nav-title">a vyza ventures — travel journal</div>
+</div>
+
+<article class="jp-post">
+    <div class="jp-hero" style="background-image:url('/stories/banos.jpeg'); background-size:cover; background-position:center;"><div class="jp-hero-overlay"></div><span class="jp-hero-tag">S. America</span></div>
+    <div class="jp-content">
+      <div class="jp-title-block">
+        <div class="jp-eyebrow">Featured Adventure</div>
+        <h1 class="jp-title">I Almost Died Solo Biking in Baños</h1>
+        <div class="jp-subtitle">The Ruta de las Cascadas, a pitch-black tunnel, and the beauty of looking where you never thought to look.</div>
+        <div class="jp-meta"><span>Avanti</span><span>·</span><span>2023</span><span>·</span><span>14 min read</span></div>
+      </div>
+      <div class="jp-body">
+
+        <p>Have you ever heard of Baños de Agua Santa?</p>
+
+        <p>It's a small town in Ecuador known for its hot springs, endless waterfalls, and adrenaline-pumping adventure sports. I ended up there on a whim. While in Quito, someone mentioned it to me, and it sounded like the perfect place for a solo traveler to explore. So I booked a ride, made my way to this vibrant little town — and it did not disappoint.</p>
+
+        <p>Baños was colorful and alive, tucked into the mountains right where the Andes meet the Amazon. Even the drive in was stunning: lush greenery, deep valleys, waterfalls spilling off cliffs. Once there, I packed my days with white-water rafting, canyoning, the famous "Swing at the End of the World," thermal baths, and, of course, waterfall chasing.</p>
+
+        <p>And in true Avanti fashion, I almost died chasing those waterfalls.</p>
+
+        <p>This is that story.</p>
+
+        <div class="jp-divider-stars">✦ ✦ ✦</div>
+
+        <div class="jp-day-section">
+
+          <p>Baños is famous for many things, but one of the big ones is its waterfalls. The town is surrounded by them, and the most popular are strung along a stretch of highway called the Ruta de las Cascadas.</p>
+
+          <p>You can experience the route in a bunch of ways: ATV, car, or bike.</p>
+
+          <p>I chose bike.</p>
+
+          <p>It sounded like a fun day activity — plus, I'd get a workout in. Two birds, one stone. The hostel I stayed at, Great Hostels (yes, that's actually its name), made it an easy choice too. They had bikes for $10/day, complete with a helmet, a map, and some advice (which, spoiler: I definitely misheard).</p>
+
+          <p>The hostel itself was a vibe — colorful, social, and full of cats and dogs wandering the property. There was this black cat I completely fell in love with. 🐈 Anyway, the bikes were cheap, so the decision was made.</p>
+
+          <p>The route is simple enough: follow the road in one direction, make stops at the waterfalls, and enjoy the ride. One way, it's about 11 miles — not too crazy for a day trip.</p>
+
+          <div style="text-align:center; margin:24px 0;">
+            <img src="/stories/banos/route.png" alt="Ruta de las Cascadas route map" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:8px;">
+          </div>
+
+          <p>My goal was to visit these waterfalls:</p>
+          <ul>
+            <li>Cascada de Agoyán</li>
+            <li>Cascada Manto de la Novia</li>
+            <li>Paílón del Diablo</li>
+            <li>Cascada Machay</li>
+          </ul>
+
+          <p>And so, off I went.</p>
+
+          <p>The ride started off smooth. Not too many cars, mostly empty streets, and a lot of downhill cruising. Honestly, I was thriving. The scenery was gorgeous — mountains, rivers, greenery everywhere. Baños is ridiculously beautiful.</p>
+
+          <div class="jp-photo-row" style="grid-template-columns: 1fr 1.3fr 0.6fr;">
+            <div class="jp-media"><img src="/stories/banos/image1.jpg" alt="Baños scenery"></div>
+            <div class="jp-media"><img src="/stories/banos/image2.jpg" alt="Baños mountains" style="object-position: center 40%;"></div>
+            <div class="jp-media"><img src="/stories/banos/image3.jpg" alt="Baños views"></div>
+          </div>
+
+        </div>
+
+        <div class="jp-day-section">
+          <div class="jp-media float-right landscape">
+            <img src="/stories/banos/agoyan.png" alt="Cascada de Agoyan viewpoint">
+          </div>
+          <h3 class="jp-day-heading">My first stop was Cascada de Agoyán.</h3>
+
+          <p>I only checked it out from a viewpoint, but it was still impressive. You can zipline right across the gorge toward the waterfall, which looked epic, but I decided to save my energy for later stops. Watching strangers scream their way across the canyon was enough entertainment for me.</p>
+
+          <p>From there, I pedaled on toward my next stop: Cascada Manto de la Novia. And this is where things… got dicey.</p>
+
+        </div>
+
+        <div class="jp-day-section">
+          <div class="banos-tunnel-intro" style="display:flex; gap:24px; align-items:flex-start;">
+            <div class="banos-tunnel-img" style="flex:0 0 30%;">
+              <div class="jp-media portrait">
+                <img src="/stories/banos/tunnel1.png" alt="The dark tunnel entrance">
+              </div>
+            </div>
+            <div style="flex:1; min-width:0;">
+              <p>When I rented my bike, I'd been told there might be a tunnel or two on the route, but not to worry because most had clear bike bypasses. Easy.</p>
+              <p>Or so I thought.</p>
+              <p>I'd already gone through one short tunnel earlier in the ride where I could see the exit the whole time — no problem. But then I rolled up to <em>this</em> tunnel.</p>
+              <p>And in my defense: I didn't see a bypass sign anywhere.</p>
+              <p>In my offense: I'm an idiot who looked at a pitch-black hole in the mountain and thought, <em>"Yep, that's my route."</em></p>
+            </div>
+          </div>
+
+          <p>Reader, it was not my route.</p>
+          <p>The tunnel was pitch black. I couldn't see a thing in front of me. And it wasn't just dark — it was active two-way traffic. Cars were flying past, headlights blinding me, and I was hugging the side of the wall for dear life. At one point, I tried pulling over to wait it out, but cars just kept coming.</p>
+          <p>So I came up with a plan: use my phone flashlight to see.</p>
+          <p>Spoiler: it did nothing. Absolutely useless.</p>
+
+          <div class="banos-tunnel-grid" style="display:grid; grid-template-columns:0.7fr 1.6fr 0.7fr; grid-template-rows:auto auto; gap:20px; align-items:start; margin:24px 0;">
+
+            <!-- Left col, row 1: tunnel2 -->
+            <div style="grid-column:1; grid-row:1;">
+              <div class="jp-media portrait jp-gif-reel">
+                <video src="/stories/banos/tunnel2.mp4" autoplay muted loop playsinline></video>
+              </div>
+            </div>
+
+            <!-- Middle col, row 1: text -->
+            <div style="grid-column:2; grid-row:1; padding-top:30px;">
+              <p>So I just had to pedal. Hard. Hoping I wouldn't get hit. I ended up using the headlights of oncoming cars to guide me forward. After what felt like forever, I literally saw the light at the end of the tunnel — and sprinted my ass out of there.</p>
+              <p>My genuine reaction: pure relief. Also, pure regret.
+                <svg class="banos-regret-arrow" width="52" height="28" viewBox="0 0 52 28" style="display:inline-block; vertical-align:middle; margin-left:5px;">
+                  <path d="M2,14 Q11,6 20,14 Q29,22 38,14 L44,14 L37,8 M44,14 L37,20"
+                        stroke="#a0785a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-dasharray="95" stroke-dashoffset="95">
+                    <animate attributeName="stroke-dashoffset" from="95" to="0" dur="1.4s" repeatCount="indefinite"/>
+                  </path>
+                </svg>
+              </p>
+            </div>
+
+            <!-- Right col, spans both rows: tunnel3 offset down -->
+            <div style="grid-column:3; grid-row:1/3; padding-top:110px;">
+              <div class="jp-media portrait jp-gif-reel">
+                <video src="/stories/banos/tunnel3.mp4" autoplay muted loop playsinline></video>
+              </div>
+            </div>
+
+            <!-- Row 2, cols 1–2: paragraph directly below tunnel2 -->
+            <div style="grid-column:1/3; grid-row:2;">
+              <p>Even after I made it out, I was still confused because I hadn't seen another path. So I convinced myself, <em>"Maybe that's just the way?"</em> (It wasn't. But we'll get to that later.)</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="jp-day-section">
+          <h3 class="jp-day-heading">I finally rolled up to Cascada Manto de la Novia.</h3>
+
+          <div class="jp-media float-left" style="width:25%; aspect-ratio:3/4; overflow:hidden; border-radius:8px; margin:0 20px 12px 0;">
+            <img src="/stories/banos/novia1.jpg" alt="Cascada Manto de la Novia" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+
+          <p>Like Agoyán, I just viewed it from a distance — mostly because I knew I had a long day ahead of me. From the viewpoint, it was still stunning. Most people either take a little cable car across the gorge to get closer to the falls, or zipline for a shot of adrenaline. Both looked fun, but I was saving my time (and energy) for later stops. Instead, I grabbed a snack from a nearby stand, enjoyed the view, and hopped back on my bike.</p>
+
+          <p>A few kilometers later, I ran into another tunnel. And this time? I actually saw the bike bypass.</p>
+
+          <div class="jp-gif-reel banos-novia-vid" style="float:right; clear:left; width:20%; margin:-10px 0 12px 16px; border-radius:8px; overflow:hidden;">
+            <video src="/stories/banos/novia2.mp4" autoplay muted loop playsinline style="width:100%; display:block;"></video>
+          </div>
+
+          <p>Cue lightbulb moment. 💡 And of course, I had to vlog:</p>
+
+          <p>I pulled over, stared at the clearly marked path, and realized: I had 100% messed up at the last tunnel. I could have avoided my near-death biking experience entirely.</p>
+
+          <h3 class="jp-day-heading">My next big stop was Paílón del Diablo</h3>
+
+          <p>It was located in the small town of Río Verde. It's a cute place with plenty of roadside restaurants and shops, so I parked and locked my bike, then walked over to the entrance.</p>
+
+          <p>There are actually two entrances to see Paílón del Diablo — an upper and a lower. I didn't realize this until later, but I ended up taking the lower entrance, which I thought was the cooler one.</p>
+
+          <p>From the gate, it's about a 15-minute downhill walk with lots of stairs. At the park entrance, I paid the $2 fee and headed in. The trail itself was beautiful — stone paths, lush greenery, and then finally, the waterfall itself.</p>
+
+          <p>And wow. Paílón del Diablo is massive. The sheer force of the water is incredible, but what really got me was the architecture of the park. The stone staircases and pathways carved into the landscape made the whole thing feel magical.</p>
+
+          <p>One of the highlights was a narrow tunnel path called La Grieta al Cielo. It winds its way under the falls, and some parts are so tight you have to crawl through. You will definitely get wet.</p>
+
+          <p>Of course, I thought this tunnel would connect me to the upper viewpoint. Spoiler: it did not. Instead, it led me directly under the waterfall — where I got absolutely drenched. Not mad about it though. It was cold, chaotic, and hilarious.</p>
+
+          <p>After my unexpected shower, I crossed the suspension bridge to a little café with a perfect view of the falls. I ordered an Ecuadorian hot chocolate, warmed up, and just sat there soaking it all in (pun intended). Honestly? One of my favorite moments of the entire day.</p>
+
+        </div>
+
+        <div class="jp-day-section" style="margin-top:0;">
+          <div class="banos-diablo-layout" style="display:flex; gap:12px; align-items:stretch;">
+
+            <!-- Left: diablo1 portrait video (9:16) — drives total height -->
+            <div style="width:30%; aspect-ratio:9/16; flex-shrink:0;">
+              <div class="jp-video-block" id="jp-banos-diablo-slot" style="height:100%; width:100%;"></div>
+            </div>
+
+            <!-- Right: column with top row (diablo2/3/4) + bottom (diablo5) -->
+            <div style="flex:1; display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+              <!-- Top row: diablo2 | diablo3 gif-reel | diablo4 -->
+              <div style="flex:1.5; display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; min-height:0;">
+                <div class="jp-media" style="height:100%;"><img src="/stories/banos/diablo2.jpg" alt="Pailón del Diablo"></div>
+                <div class="jp-media jp-gif-reel" style="height:100%;"><video src="/stories/banos/diablo3.mp4" autoplay muted loop playsinline></video></div>
+                <div class="jp-media" style="height:100%;"><img src="/stories/banos/diablo4.jpg" alt="Pailón del Diablo"></div>
+              </div>
+
+              <!-- Bottom: diablo5 full width, shorter -->
+              <div class="jp-media" style="flex:1; min-height:0;">
+                <img src="/stories/banos/diablo5.jpg" alt="Pailón del Diablo suspension bridge">
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="jp-day-section">
+          <div class="jp-media float-right portrait">
+            <img src="/stories/banos/machay1.jpg" alt="Cascada Machay trail">
+          </div>
+          <h3 class="jp-day-heading">My last stop was Cascada Machay.</h3>
+
+          <p>By this point, I wasn't totally gassed, but I was definitely feeling the wear of the day. The last stretch was uphill, and I eventually gave in and started walking my bike. No shame.</p>
+
+          <p>At the entrance, there was no fee, but there were so many stairs down to the falls. Going down wasn't too bad — but I knew coming back up was going to be brutal.</p>
+
+          <p>The waterfall itself was worth it. It's also a popular swimming spot, so I waded into the (freezing) water, which felt amazing after biking in the sun. I even stretched out on some rocks and took a little nap. When I first arrived, I had the place completely to myself — which made it even more special.</p>
+
+          <div class="jp-media float-left landscape">
+            <img src="/stories/banos/machay2.jpeg" alt="Cascada Machay">
+          </div>
+
+          <div class="jp-media float-right landscape jp-gif-reel">
+            <video src="/stories/banos/machay3.mp4" autoplay muted loop playsinline></video>
+          </div>
+
+          <div class="jp-media float-left portrait">
+            <img src="/stories/banos/machay4.jpeg" alt="Cascada Machay">
+          </div>
+
+          <p>As I was getting ready to leave, I ran into some friends from the hostel who told me about an important life hack: you can actually arrange transport back to Baños instead of biking the 11 miles uphill. They were planning to grab a ride, and I happily joined their plan.</p>
+
+          <div class="banos-machay-vids" style="display:flex; gap:12px; margin:20px 0;">
+            <div class="jp-media jp-gif-reel" style="flex:1;"><video src="/stories/banos/machay5.mp4" autoplay muted loop playsinline></video></div>
+            <div style="flex:1; position:relative;">
+              <span style="position:absolute; top:-20px; right:0; font-size:11px; color:#a0785a; font-style:italic; white-space:nowrap;">(peep the tunnel I biked through)</span>
+              <div class="jp-media jp-gif-reel" style="height:100%;"><video src="/stories/banos/machay6.mp4" autoplay muted loop playsinline></video></div>
+            </div>
+          </div>
+
+          <p style="clear:both;">So after soaking in a bit more waterfall time, we hiked back up those endless stairs and asked the women running the snack shop to call us a ride. A pickup truck showed up, we loaded our bikes in the back, and off we went — wind in our hair, mountains all around us. Honestly, the perfect way to end the day.</p>
+
+        </div>
+
+        <div class="jp-divider-stars">✦ ✦ ✦</div>
+
+        <div class="jp-day-section">
+
+          <p>Back in Baños, I couldn't stop smiling. This bike ride was hands down my favorite day in Baños — maybe even in all of Ecuador. It had everything: adventure, chaos, beauty, a near-death experience, and friendly strangers who made the journey feel safe and fun.</p>
+
+          <p>As a solo, female traveler, I had debated whether I should even attempt this ride. But I'm a big believer in doing the things that scare you — responsibly, of course. And this day proved why.</p>
+
+          <p>Baños was a town I hadn't even heard of before Ecuador, but now it holds a permanent place in my heart. It's always those unexpected places — the ones you never planned for — that end up surprising you the most.</p>
+
+          <p>The beauty of looking where you never thought to look.</p>
+
+        </div>
+
+      </div>
+
+      <div class="jp-signoff">
+        <div class="jp-kiss-wrap">
+          <img class="jp-kiss" src="lip_stain.png" alt="">
+          <div class="jp-signoff-name">Avanti</div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="story-cta-wrap">
+    <a href="https://www.foratravel.com/advisor/avanti-vyza" target="_blank" rel="noopener" class="story-cta-primary">Plan a trip like this with me ✈</a>
+    <div class="story-related-block">
+      <div class="story-related-title">Related experiences</div>
+      <div class="story-related-sub">Hand-picked hotels, tours, and gear coming soon.</div>
+    </div>
+    <a href="/" class="story-back-home">← back to all stories</a>
+  </div>
+</article>
+
+</body>
+</html>

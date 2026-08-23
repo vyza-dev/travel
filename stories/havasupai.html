@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chasing Waterfalls in Havasupai — A Vyza Ventures</title>
+<meta name="description" content="The 10-mile hike into Havasupai's turquoise waterfalls — how to get permits, what to pack, and why this Arizona canyon is worth the effort.">
+<link rel="canonical" href="https://avyzaventures.netlify.app/stories/havasupai">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta name="p:domain_verify" content="47c4046286177f1d9a5b3bf910f4a976"/>
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://avyzaventures.netlify.app/stories/havasupai">
+<meta property="og:title" content="Chasing Waterfalls in Havasupai — A Vyza Ventures">
+<meta property="og:description" content="The 10-mile hike into Havasupai's turquoise waterfalls — how to get permits, what to pack, and why this Arizona canyon is worth the effort.">
+<meta property="og:image" content="https://avyzaventures.netlify.app/stories/havasupai.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:author" content="Avanti Vyza">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chasing Waterfalls in Havasupai — A Vyza Ventures">
+<meta name="twitter:description" content="The 10-mile hike into Havasupai's turquoise waterfalls — how to get permits, what to pack, and why this Arizona canyon is worth the effort.">
+<meta name="twitter:image" content="https://avyzaventures.netlify.app/stories/havasupai.jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Caveat:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Chasing Waterfalls in Havasupai",
+  "description": "The 10-mile hike into Havasupai's turquoise waterfalls — how to get permits, what to pack, and why this Arizona canyon is worth the effort.",
+  "image": "https://avyzaventures.netlify.app/stories/havasupai.jpeg",
+  "author": {"@type": "Person", "name": "Avanti Vyza", "url": "https://avyzaventures.netlify.app/"},
+  "publisher": {"@type": "Person", "name": "Avanti Vyza"},
+  "mainEntityOfPage": "https://avyzaventures.netlify.app/stories/havasupai"
+}
+</script>
+
+<style>
+:root {
+  --paper: #F2EBD9;
+  --paper-dark: #E8DCC8;
+  --paper-aged: #DDD0B8;
+  --ink: #2C1A0E;
+  --ink-mid: #5C3D2E;
+  --ink-light: #8B6650;
+  --red: #B83232;
+  --terracotta: #C4623A;
+  --sage: #6B7C5A;
+  --mustard: #C9963A;
+  --tape: rgba(210,195,155,0.7);
+  --shadow: rgba(44,26,14,0.15);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: 'Lora', serif;
+  background: #F2EBD9;
+  color: #2C1A0E;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+/* Un-modal the .jp-post so it renders standalone */
+.jp-post { display: block !important; opacity: 1 !important; }
+
+.jp-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 600;
+  background: var(--paper, #F2EBD9);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform: translateY(100%);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  -webkit-overflow-scrolling: touch;
+  pointer-events: none;
+  cursor: default !important;
+}
+.jp-overlay.open {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* close bar */
+.jp-close-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(193, 122, 80, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 14px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(193, 122, 80, 0.22);
+}
+.jp-back {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: var(--ink);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+  font-weight: 700;
+}
+.jp-back:hover { color: var(--terracotta); }
+.jp-back-arrow { font-size: 22px; }
+.jp-nav-title {
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  color: var(--ink-light);
+  opacity: 0.6;
+}
+/* X close button — fixed to viewport, OUTSIDE overlay to avoid transform issues */
+#jp-fixed-close {
+  position: fixed;
+  top: 72px; right: 28px;
+  z-index: 9999;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(193, 122, 80, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: #fff;
+  transition: background 0.2s, transform 0.2s;
+}
+#jp-fixed-close.visible { display: flex; }
+#jp-fixed-close:hover {
+  background: rgba(193, 122, 80, 1);
+  transform: scale(1.08);
+}
+#as-fixed-close {
+  position: fixed;
+  top: 72px; right: 28px;
+  z-index: 9999;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(193, 122, 80, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: #fff;
+  transition: background 0.2s, transform 0.2s;
+}
+#as-fixed-close.visible { display: flex; }
+#as-fixed-close:hover {
+  background: rgba(193, 122, 80, 1);
+  transform: scale(1.06);
+}
+
+/* hero banner */
+.jp-hero {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  min-height: 360px;
+  background: var(--paper-dark);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jp-hero-placeholder {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(44,26,14,0.08);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.jp-hero-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(to top, var(--paper), transparent);
+}
+.jp-hero-tag {
+  position: absolute;
+  top: 24px; left: 32px;
+  background: var(--terracotta);
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 2px;
+  transform: rotate(2deg);
+}
+
+/* content column */
+.jp-content {
+  max-width: 980px;
+  margin: -80px auto 0;
+  padding: 0 56px 100px;
+  position: relative;
+  z-index: 2;
+}
+
+/* title block */
+.jp-title-block {
+  margin-bottom: 48px;
+  text-align: center;
+}
+.jp-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  color: var(--terracotta);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.jp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.jp-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: var(--ink-light);
+  line-height: 1.6;
+  font-style: italic;
+}
+.jp-meta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  color: var(--ink-light);
+  opacity: 0.6;
+}
+
+/* body prose */
+.jp-body p {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: var(--ink-mid);
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+.jp-body p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.jp-body p em {
+  color: var(--ink);
+}
+.jp-body ul, .jp-body ol {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  margin: 0 0 24px 0;
+  padding-left: 24px;
+}
+.jp-body ul li, .jp-body ol li {
+  margin-bottom: 6px;
+  color: var(--ink-mid);
+}
+.jp-body ul li:last-child, .jp-body ol li:last-child {
+  margin-bottom: 0;
+}
+/* When a paragraph leads directly into a list, close the gap so it reads as one block */
+.jp-body p + ul,
+.jp-body p + ol {
+  margin-top: -14px;
+}
+.jp-body ul li strong, .jp-body ol li strong {
+  color: var(--ink-mid);
+  font-weight: 700;
+}
+
+/* section dividers */
+.jp-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--ink);
+  opacity: 0.1;
+  margin: 40px auto;
+}
+.jp-divider-stars {
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: var(--ink-light);
+  opacity: 0.3;
+  margin: 40px 0;
+  letter-spacing: 8px;
+}
+
+/* pull quotes / margin notes */
+.jp-pullquote {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(22px, 2.8vw, 28px);
+  color: var(--terracotta);
+  text-align: center;
+  line-height: 1.45;
+  margin: 48px 0;
+  padding: 24px 40px;
+  position: relative;
+}
+.jp-pullquote::before,
+.jp-pullquote::after {
+  content: '';
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  width: 50px; height: 1.5px;
+  background: var(--terracotta);
+  opacity: 0.25;
+}
+.jp-pullquote::before { top: 0; }
+.jp-pullquote::after { bottom: 0; }
+
+/* margin note (handwritten aside) */
+.jp-margin-note {
+  background: #FFF8E1;
+  border-left: 3px solid var(--mustard);
+  padding: 16px 20px;
+  margin: 32px 0;
+  border-radius: 0 3px 3px 0;
+  position: relative;
+}
+.jp-margin-note::before {
+  content: 'note:';
+  font-family: 'Caveat', cursive;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--mustard);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+.jp-margin-note p {
+  font-family: 'Caveat', cursive !important;
+  font-size: 15px !important;
+  color: var(--ink-mid) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 0 !important;
+}
+
+/* pro tip callout */
+.jp-protip {
+  background: rgba(107, 124, 90, 0.08);
+  border-left: 3px solid var(--sage);
+  padding: 16px 20px;
+  margin: 32px 0;
+  border-radius: 0 3px 3px 0;
+}
+.jp-protip::before {
+  content: 'pro tip:';
+  font-family: 'Caveat', cursive;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+.jp-protip p {
+  font-family: 'Caveat', cursive !important;
+  font-size: 15px !important;
+  color: var(--ink-mid) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 0 !important;
+}
+
+/* photo placeholders */
+.jp-photo {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: var(--paper-dark);
+  border-radius: 3px;
+  margin: 36px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.1);
+}
+.jp-photo-label {
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  color: var(--ink-light);
+  opacity: 0.4;
+  text-align: center;
+}
+.jp-photo.portrait { aspect-ratio: 3/4; max-width: 400px; margin-left: auto; margin-right: auto; }
+.jp-photo.square { aspect-ratio: 1; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+/* photo grid (2-up or 3-up) */
+.jp-photo-grid {
+  display: grid;
+  gap: 16px;
+  margin: 36px 0;
+}
+.jp-photo-grid.two-up { grid-template-columns: 1fr 1fr; }
+.jp-photo-grid.three-up { grid-template-columns: 1fr 1fr 1fr; }
+.jp-photo-grid .jp-photo { margin: 0; aspect-ratio: 1; }
+
+/* video placeholder */
+.jp-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #2C1A0E;
+  border-radius: 3px;
+  margin: 36px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.15);
+}
+.jp-video-play {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: rgba(242, 235, 217, 0.15);
+  border: 2px solid rgba(242, 235, 217, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jp-video-play::after {
+  content: '';
+  width: 0; height: 0;
+  border-left: 18px solid rgba(242, 235, 217, 0.6);
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  margin-left: 4px;
+}
+.jp-video-label {
+  position: absolute;
+  bottom: 14px; left: 18px;
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  color: rgba(242, 235, 217, 0.4);
+}
+
+/* ── wrapped magazine-style media (floats with text wrapping) ── */
+.jp-media {
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.12);
+  background: var(--paper-dark);
+  position: relative;
+}
+.jp-media img,
+.jp-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* float-right: image sits on the right, text wraps on left */
+.jp-media.float-right {
+  float: right;
+  width: 46%;
+  margin: 6px 0 18px 28px;
+  shape-outside: margin-box;
+}
+/* float-left: image sits on the left, text wraps on right */
+.jp-media.float-left {
+  float: left;
+  width: 46%;
+  margin: 6px 28px 18px 0;
+  shape-outside: margin-box;
+}
+/* aspect ratios */
+.jp-media.portrait { aspect-ratio: 3/4; }
+.jp-media.landscape { aspect-ratio: 4/3; }
+.jp-media.square { aspect-ratio: 1; }
+.jp-media.tall { aspect-ratio: 9/16; }
+/* a small stack of two photos in a single floated column */
+.jp-media-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.jp-media-stack.float-right {
+  float: right;
+  width: 42%;
+  margin: 6px 0 18px 28px;
+}
+.jp-media-stack.float-left {
+  float: left;
+  width: 42%;
+  margin: 6px 28px 18px 0;
+}
+.jp-media-stack .jp-media {
+  width: 100%;
+  margin: 0;
+  float: none;
+}
+.jp-media-stack .jp-media.portrait { aspect-ratio: 3/4; }
+.jp-media-stack .jp-media.landscape { aspect-ratio: 4/3; }
+
+/* mid-section header strip (for top of an article — multiple photos in a band) */
+.jp-header-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+  margin: 0 0 28px 0;
+  height: 200px;
+}
+.jp-header-strip .jp-media {
+  margin: 0;
+  float: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* title block with a header image alongside (magazine cover layout) */
+.jp-title-with-header {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 36px;
+  align-items: end;
+  margin: 0 0 56px 0;
+}
+.jp-title-with-header .jp-title-block {
+  margin: 0;
+}
+.jp-title-with-header .jp-header-photo {
+  width: 100%;
+  aspect-ratio: 1.68/1;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 6px 8px 24px rgba(44,26,14,0.18);
+  transform: rotate(1.5deg);
+}
+.jp-title-with-header .jp-header-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 720px) {
+  .jp-title-with-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .jp-title-with-header .jp-header-photo {
+    transform: none;
+  }
+}
+
+/* clearfix wrappers — use after a section that floated media to break the flow before the next section */
+.jp-clear { clear: both; }
+
+/* native browser-controlled video (Day 4) — completely isolated from jp-media */
+.jp-video-block {
+  float: left;
+  width: 42%;
+  margin: 6px 28px 18px 0;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.12);
+  background: #000;
+  line-height: 0;
+  position: relative;
+}
+/* Cap height so portrait videos don't push text below them */
+#jp-day4-video-slot {
+  height: 400px;
+}
+#jp-banos-diablo-slot {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+}
+.jp-video-block video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Custom Day 4 player controls */
+.jp-d4-sound-btn {
+  position: absolute;
+  bottom: 12px; right: 12px;
+  width: 36px; height: 36px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.jp-d4-sound-btn:hover { background: rgba(0,0,0,0.82); transform: scale(1.08); }
+.jp-d4-sound-btn svg { width: 18px; height: 18px; fill: currentColor; pointer-events: none; }
+
+.jp-d4-pp {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px; height: 52px;
+  background: rgba(0,0,0,0.52);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 50%;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none; /* video click handles play/pause */
+  z-index: 5;
+}
+.jp-d4-pp svg { width: 26px; height: 26px; fill: currentColor; }
+
+.jp-d4-hint {
+  position: absolute;
+  bottom: 14px; left: 12px;
+  font-family: 'Caveat', cursive;
+  font-size: 13px;
+  color: rgba(255,255,255,0.82);
+  background: rgba(0,0,0,0.42);
+  padding: 3px 9px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.4s;
+}
+
+/* silent GIF-style reel — no controls, just loops */
+.jp-gif-reel {
+  position: relative;
+  overflow: hidden;
+}
+.jp-gif-reel video {
+  pointer-events: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* video reel — autoplay muted, click to unmute/play/pause */
+.jp-reel {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.jp-reel video {
+  pointer-events: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom-right: volume icon */
+.jp-reel-icon {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  z-index: 5;
+}
+.jp-reel-icon svg { width: 16px; height: 16px; fill: #fff; }
+.jp-reel-icon:hover { background: rgba(0,0,0,0.8); transform: scale(1.1); }
+
+/* Centre: play/pause indicator (shows when paused) */
+.jp-reel-playpause {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 4;
+}
+.jp-reel-playpause svg { width: 24px; height: 24px; fill: #fff; margin-left: 3px; }
+.jp-reel.is-paused .jp-reel-playpause,
+.jp-gif-reel.is-paused .jp-reel-playpause {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+/* brief flash of play icon when unpausing */
+.jp-reel.play-flash .jp-reel-playpause,
+.jp-gif-reel.play-flash .jp-reel-playpause {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+/* Player mode (Day 4) — larger button, always visible before first play */
+.jp-reel-player.is-paused .jp-reel-playpause {
+  width: 72px; height: 72px;
+}
+.jp-reel-player.is-paused .jp-reel-playpause svg {
+  width: 32px; height: 32px;
+}
+/* Dim overlay so the play button reads clearly before video starts */
+.jp-reel-player.is-paused::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Bottom-left: expand button */
+.jp-reel-expand {
+  position: absolute;
+  bottom: 10px; left: 10px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s, transform 0.15s;
+}
+.jp-reel-expand svg { width: 14px; height: 14px; fill: #fff; }
+.jp-reel-expand:hover { background: rgba(0,0,0,0.8); transform: scale(1.1); }
+.jp-reel:hover .jp-reel-expand { opacity: 1; }
+
+/* Muted indicator overlay (first-visit hint) */
+.jp-reel-muted-hint {
+  position: absolute;
+  bottom: 48px; right: 8px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-family: 'Lora', serif;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  z-index: 5;
+}
+.jp-reel:hover .jp-reel-muted-hint { opacity: 1; }
+
+/* Photo hover tilt (non-reel media) */
+.jp-media:not(.jp-reel) {
+  transition: transform 0.35s cubic-bezier(0.34, 1.2, 0.64, 1),
+              box-shadow 0.35s ease;
+}
+.jp-media:not(.jp-reel):hover {
+  transform: rotate(0deg) scale(1.035);
+  box-shadow: 8px 14px 32px rgba(44,26,14,0.28);
+  z-index: 20;
+}
+.jp-scatter-wrap .jp-media:hover {
+  z-index: 20;
+}
+
+/* PDF-style inline photo row — full-width grid between paragraphs */
+.jp-photo-row {
+  display: grid;
+  grid-template-columns: 1fr 0.68fr 1fr;
+  gap: 10px;
+  margin: 28px 0;
+  align-items: stretch;
+}
+.jp-photo-row .jp-media {
+  margin: 0;
+  float: none;
+  width: 100%;
+  height: 210px;
+  aspect-ratio: auto;
+  transform: none;
+}
+.jp-photo-row .jp-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 720px) {
+  .jp-photo-row {
+    grid-template-columns: 1fr 1fr !important; /* inline style override needs !important */
+    gap: 8px;
+  }
+  .jp-photo-row .jp-media {
+    height: 160px;
+  }
+  .jp-photo-row .jp-media:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── signoff sparkles — scattered ✦ around lip stain ── */
+/* Stars are absolute inside .jp-kiss-wrap (position:relative, overflow:visible) */
+/* Each star starts at center of the kiss wrap (top:50%, left:50%) then scatters */
+.jp-kiss-wrap {
+  overflow: visible; /* let stars escape the 200×200 bounds */
+}
+.jp-star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  color: #6b1a2e;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translate(-50%, -50%) scale(0);
+}
+.jp-signoff.is-signed .jp-star-1 { animation: star1 1.1s cubic-bezier(0.2,0.8,0.4,1) 1.45s forwards; }
+.jp-signoff.is-signed .jp-star-2 { animation: star2 1.0s cubic-bezier(0.2,0.8,0.4,1) 1.55s forwards; }
+.jp-signoff.is-signed .jp-star-3 { animation: star3 0.95s cubic-bezier(0.2,0.8,0.4,1) 1.5s forwards; }
+.jp-signoff.is-signed .jp-star-4 { animation: star4 1.1s cubic-bezier(0.2,0.8,0.4,1) 1.6s forwards; }
+.jp-signoff.is-signed .jp-star-5 { animation: star5 0.9s cubic-bezier(0.2,0.8,0.4,1) 1.52s forwards; }
+.jp-signoff.is-signed .jp-star-6 { animation: star6 1.05s cubic-bezier(0.2,0.8,0.4,1) 1.48s forwards; }
+@keyframes star1 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% - 80px), calc(-50% - 64px)) scale(1.2); }
+}
+@keyframes star2 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% + 88px), calc(-50% - 52px)) scale(1.0); }
+}
+@keyframes star3 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% + 96px), calc(-50% + 36px)) scale(0.9); }
+}
+@keyframes star4 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% - 60px), calc(-50% + 78px)) scale(1.1); }
+}
+@keyframes star5 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% + 20px), calc(-50% - 90px)) scale(0.85); }
+}
+@keyframes star6 {
+  0%   { opacity:0; transform: translate(-50%,-50%) scale(0); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform: translate(calc(-50% - 36px), calc(-50% + 84px)) scale(1.15); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jp-star { animation: none !important; }
+}
+
+/* Lightbox */
+.jp-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20,12,6,0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  padding: 40px;
+}
+.jp-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+.jp-lightbox-img {
+  max-width: min(92vw, 1400px);
+  max-height: 88vh;
+  object-fit: contain;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  border: 8px solid #fff;
+  border-radius: 2px;
+  transform: scale(0.92);
+  transition: transform 0.35s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+.jp-lightbox.is-open .jp-lightbox-img { transform: scale(1); }
+.jp-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.jp-lightbox-close:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.08);
+}
+
+/* Day section spacing — when a section floats media, add bottom padding so next day starts cleanly */
+.jp-day-section {
+  margin-top: 36px;
+}
+.jp-day-section::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Day scatter collage — used on Day 5 */
+.jp-day-scatter {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 44px;
+  margin-top: 36px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+.jp-day-scatter .jp-day-text { min-width: 0; }
+.jp-day-scatter .jp-day-heading { margin-top: 0; }
+.jp-scatter-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.92 / 1;
+}
+.jp-scatter-wrap .jp-media {
+  position: absolute;
+  margin: 0;
+  float: none;
+  box-shadow: 4px 10px 28px rgba(44,26,14,0.22);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, z-index 0s;
+}
+.jp-scatter-wrap .jp-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.jp-scatter-wrap .scatter-1 {
+  top: 0; left: 0;
+  width: 68%;
+  transform: rotate(-4deg);
+  z-index: 1;
+}
+.jp-scatter-wrap .scatter-2 {
+  top: 26%; right: 0;
+  width: 56%;
+  transform: rotate(5.5deg);
+  z-index: 2;
+}
+.jp-scatter-wrap .scatter-3 {
+  bottom: 0; left: 18%;
+  width: 64%;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+.jp-scatter-wrap .jp-media:hover {
+  z-index: 10;
+  transform: rotate(0deg) scale(1.04);
+  box-shadow: 6px 14px 36px rgba(44,26,14,0.32);
+}
+
+/* intro section: real two-column grid (no float, no text wrap under photo) */
+.jp-intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.jp-intro-text { display: flex; flex-direction: column; justify-content: center; }
+.jp-intro-text p { margin: 0 0 16px; }
+.jp-intro-text p:last-child { margin-bottom: 0; }
+.jp-media.jp-banner-photo {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  transform: rotate(1.2deg);
+  margin: 0;
+  float: none;
+  box-shadow: 6px 8px 24px rgba(44,26,14,0.18);
+}
+.jp-media.jp-banner-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* section headings (Pricing & Costs, Booking, Was It Worth It...) */
+.jp-section-heading {
+  font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 44px 0 22px;
+  color: var(--ink);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* day headings */
+.jp-day-heading {
+  font-family: 'Caveat', 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 14px;
+  color: var(--terracotta, #c17a50);
+  letter-spacing: 0.3px;
+}
+
+/* pro tips callout */
+.jp-pro-tips {
+  background: rgba(193, 122, 80, 0.10);
+  border-left: 3px solid rgba(193, 122, 80, 0.55);
+  padding: 18px 24px;
+  margin: 28px 0;
+  border-radius: 2px;
+  overflow: hidden; /* creates new block formatting context — stays clear of floated images */
+}
+.jp-pro-tips-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+.jp-pro-tips ul { margin: 0; padding-left: 20px; }
+.jp-pro-tips li { margin: 4px 0; }
+
+/* responsive: stack media below text on narrow screens */
+@media (max-width: 720px) {
+  .jp-content { padding: 0 24px 80px; }
+  .jp-media.float-right,
+  .jp-media.float-left,
+  .jp-media-stack.float-right,
+  .jp-media-stack.float-left,
+  .jp-media.jp-banner-photo {
+    float: none !important;
+    width: 100% !important; /* !important: inline style="width:46%" etc. would otherwise win */
+    margin: 24px 0;
+    transform: none;
+  }
+  .jp-intro-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .jp-media.jp-banner-photo {
+    aspect-ratio: 1.68/1;
+    height: auto;
+  }
+  .jp-section-heading { font-size: 26px; }
+  .jp-day-heading { font-size: 26px; }
+  .jp-header-strip {
+    height: 140px;
+  }
+  .jp-day-scatter {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .jp-scatter-wrap {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .jp-scatter-wrap .jp-media {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+  .jp-scatter-wrap .jp-media:hover {
+    transform: none;
+  }
+  .jp-video-block {
+    float: none;
+    width: 100%;
+    margin: 16px 0;
+  }
+  #jp-day4-video-slot,
+  #jp-banos-diablo-slot {
+    height: auto;
+    aspect-ratio: 9 / 16;
+  }
+
+  /* ── Baños entry: fix inline-styled layouts for mobile ── */
+
+  /* 3-photo row at top — inline style needs !important to yield to media query */
+  #jp-banos .jp-photo-row {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Tunnel intro: portrait img + text side-by-side → stack vertically */
+  #jp-banos .banos-tunnel-intro {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  #jp-banos .banos-tunnel-img {
+    flex: none !important;
+    width: 100% !important;
+  }
+
+  /* Tunnel grid: complex 3-col/2-row → simple linear stack */
+  #jp-banos .banos-tunnel-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  #jp-banos .banos-tunnel-grid > * {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    padding-top: 0 !important; /* remove the 110px offset on tunnel3 */
+  }
+
+  /* Regret arrow: points right (→) on desktop, rotate to point down (↓) on mobile */
+  #jp-banos .banos-regret-arrow {
+    transform: rotate(90deg);
+    transform-origin: center center;
+    vertical-align: middle;
+  }
+
+  /* Novia2 video: tiny float-right → full width block */
+  #jp-banos .banos-novia-vid {
+    float: none !important;
+    width: 100% !important;
+    clear: both;
+    margin: 16px 0 !important;
+  }
+
+  /* Diablo section: portrait video + photo grid side-by-side → stack */
+  #jp-banos .banos-diablo-layout {
+    flex-direction: column !important;
+  }
+  #jp-banos .banos-diablo-layout > *:first-child {
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important; /* landscape crop on mobile instead of 9:16 tall */
+  }
+
+  /* Machay side-by-side videos → stack */
+  #jp-banos .banos-machay-vids {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  #jp-banos .banos-machay-vids > * {
+    flex: none !important;
+    width: 100% !important;
+  }
+}
+
+/* lessons / takeaway box */
+.jp-lessons {
+  background: white;
+  border: 1.5px solid var(--paper-aged);
+  padding: 32px;
+  margin: 48px 0;
+  border-radius: 3px;
+  box-shadow: 4px 6px 20px rgba(44,26,14,0.08);
+  position: relative;
+}
+.jp-lessons::before {
+  content: '';
+  position: absolute;
+  top: -12px; left: 50%; transform: translateX(-50%);
+  width: 48px; height: 20px;
+  background: rgba(210,195,155,0.75);
+  border-radius: 2px;
+}
+.jp-lessons-title {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.jp-lessons ol {
+  list-style: none;
+  counter-reset: lessons;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.jp-lessons ol li {
+  counter-increment: lessons;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  padding-left: 32px;
+  position: relative;
+}
+.jp-lessons ol li::before {
+  content: counter(lessons) '.';
+  position: absolute;
+  left: 0;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--terracotta);
+  top: -2px;
+}
+
+/* ── journal sign-off — real lip stain + name centered inside ── */
+.jp-signoff {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 52px auto 8px;
+  width: fit-content;
+}
+.jp-kiss-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.jp-kiss {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.3, 0.64, 1);
+}
+.jp-signoff.is-signed .jp-kiss {
+  opacity: 0.55;
+  transform: scale(1);
+}
+.jp-signoff-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-9deg) scale(0.8);
+  transform-origin: center center;
+  font-family: 'Caveat', cursive;
+  font-size: 58px;
+  font-weight: 700;
+  color: #6b1a2e;
+  line-height: 1;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-shadow:
+    -0.5px -0.5px 0 rgba(255,248,232,0.85),
+     0.5px -0.5px 0 rgba(255,248,232,0.85),
+    -0.5px  0.5px 0 rgba(255,248,232,0.85),
+     0.5px  0.5px 0 rgba(255,248,232,0.85),
+     0    0   8px rgba(255,248,232,0.5);
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+}
+.jp-signoff.is-signed .jp-signoff-name {
+  animation: sign-draw 1.4s cubic-bezier(0.4, 0.0, 0.2, 1) 0.5s forwards;
+}
+@keyframes sign-draw {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    transform: translate(-50%, -50%) rotate(-15deg) scale(0.7);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  65% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(-50%, -50%) rotate(-5deg) scale(1.12);
+    opacity: 1;
+  }
+  82% {
+    transform: translate(-50%, -50%) rotate(-11deg) scale(0.97);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(-50%, -50%) rotate(-9deg) scale(1);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jp-kiss { opacity: 0.55; transform: none; transition: none; }
+  .jp-signoff-name { opacity: 1; clip-path: none; transform: translate(-50%, -50%) rotate(-9deg); animation: none; }
+}
+
+/* bottom nav */
+.jp-bottom-nav {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(44,26,14,0.08);
+  text-align: center;
+}
+.jp-bottom-back {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: var(--terracotta);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1.5px solid var(--terracotta);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+.jp-bottom-back:hover { opacity: 0.7; }
+
+
+
+/* Story-page CTAs */
+.story-cta-wrap { max-width: 720px; margin: 48px auto 80px; padding: 0 24px; text-align: center; }
+.story-cta-primary {
+  display: inline-block; background: #C17A50; color: #F2EBD9;
+  font-family: 'Caveat', cursive; font-size: 22px; font-weight: 700;
+  padding: 14px 32px; border-radius: 6px; text-decoration: none;
+  letter-spacing: 0.5px; box-shadow: 2px 4px 0 rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 40px;
+}
+.story-cta-primary:hover { transform: translateY(-2px); box-shadow: 2px 6px 0 rgba(0,0,0,0.2); }
+.story-related-block {
+  margin-top: 40px; padding: 32px 24px;
+  background: rgba(193, 122, 80, 0.06);
+  border: 1px dashed rgba(193, 122, 80, 0.3); border-radius: 8px;
+}
+.story-related-title { font-family: 'Caveat', cursive; font-size: 26px; color: #2C1A0E; margin-bottom: 8px; }
+.story-related-sub { font-family: 'Lora', serif; font-size: 14px; color: rgba(44,26,14,0.6); font-style: italic; }
+.story-back-home {
+  display: inline-block; margin-top: 32px;
+  font-family: 'Lora', serif; font-size: 15px;
+  color: rgba(44,26,14,0.7); text-decoration: none;
+  border-bottom: 1px solid rgba(44,26,14,0.3);
+}
+.story-back-home:hover { color: #C17A50; border-bottom-color: #C17A50; }
+</style>
+</head>
+<body>
+
+<div class="jp-close-bar" style="position:sticky;top:0;z-index:100;background:rgba(44,26,14,0.95);backdrop-filter:blur(12px);">
+  <a href="/" class="jp-back" style="text-decoration:none;"><span class="jp-back-arrow">←</span> back to a vyza ventures</a>
+  <div class="jp-nav-title">a vyza ventures — travel journal</div>
+</div>
+
+<article class="jp-post">
+    <div class="jp-hero" style="background-image:url('/stories/havasupai.jpeg'); background-size:cover; background-position:center;"><div class="jp-hero-overlay"></div><span class="jp-hero-tag">USA</span></div>
+    <div class="jp-content">
+      <div class="jp-title-block">
+        <div class="jp-eyebrow">Featured Adventure</div>
+        <h1 class="jp-title">Chasing Waterfalls in Havasupai</h1>
+        <div class="jp-subtitle">Turquoise water, red rock cliffs, a 4am hike, and canyon dogs that knew the path better than we did.</div>
+        <div class="jp-meta"><span>Avanti</span><span>·</span><span>August 2024</span><span>·</span><span>15 min read</span></div>
+      </div>
+      <div class="jp-body">
+        <p>Havasupai is a lush, green oasis tucked deep inside the Grand Canyon — home to the Havasupai people and some of the most stunning waterfalls in the U.S. It's the kind of place you don't expect to find in the middle of Arizona's desert canyons: turquoise blue water, red rock cliffs, and greenery that feels almost tropical.</p>
+
+        <p>I first heard about Havasupai back in college and instantly put it on my bucket list. The catch? It's notoriously difficult to get a camping permit. So when a friend snagged a reservation in 2024, I didn't even hesitate. I said yes.</p>
+
+        <div class="jp-divider-stars">✦ ✦ ✦</div>
+
+        <div class="jp-day-section">
+          <h3 class="jp-day-heading">Permits &amp; Logistics</h3>
+
+          <p>Here's the deal: to camp at Havasupai, you need a permit. And getting one is like winning the lottery — literally.</p>
+
+          <p>The permits open once a year, and you apply for a specific group size and dates. My friend applied for our group and snagged around a spot for early August.</p>
+
+          <div class="jp-pro-tips">
+            <div class="jp-pro-tips-title">Pro Tip:</div>
+            <ul><li>August is easier because it's hot — most people aim for cooler months.</li></ul>
+          </div>
+
+          <p>Once you've got your permit, it's time to think about logistics. There's only one way in and out: a 10-mile hike into the canyon.</p>
+
+          <p style="margin-bottom:4px;">You have a few options:</p>
+          <ul style="margin: 0 0 14px 20px; line-height: 1.7;">
+            <li>Carry your own gear (tents, food, packs, everything).</li>
+            <li>Pay for a horse to carry your gear.</li>
+            <li>Pay for a horse to carry you and your gear.</li>
+          </ul>
+
+          <p>We chose option one — backpacks stuffed with everything we needed for two days. Brutal? Yes. Worth it? Also yes.</p>
+
+          <p>Because it was August, the heat was no joke. It's strongly recommended you start before dawn to avoid hiking in the blazing sun. We started around 4 a.m. with headlamps on. It's mostly downhill into the canyon (the first mile drops about 1,000 feet), then a long gradual descent through the red walls.</p>
+
+          <p>There is a lodge and small cantina in Havasupai village (about a mile before the campground), so technically you don't need to pack food. But if you do, bring a JetBoil or similar stove. Trust me on this one. (We forgot fuel, and it was almost tragic until we begged a spare can from some friendly campers.)</p>
+        </div>
+
+        <h2 class="jp-section-heading">My Experience</h2>
+
+        <div class="jp-day-section">
+          <h3 class="jp-day-heading">Day I: The Hike In &amp; Havasu Falls</h3>
+
+          <p>Our group of eight started hiking at 4 a.m. — bleary-eyed but excited. I had flown in late the night before, so I was running on fumes, but adrenaline carried me.</p>
+
+          <p>It took us about 8 hours to reach the campground — longer than the average 4-6, but hey, we were hauling food, tents, and all our gear. Along the way, we passed through Havasupai village, where there's a small grocery store, restaurant, and even helicopter deliveries bringing in everything from groceries to flat-screen TVs. It was surreal.</p>
+
+          <div class="jp-photo-row" style="grid-template-columns: 1fr 1fr 1fr 1fr; margin: 24px 0;">
+            <div class="jp-media"><img src="/stories/Havasu/day_1.1.jpg" alt="Havasupai hike"></div>
+            <div class="jp-media"><img src="/stories/Havasu/day_1.2.jpg" alt="Havasupai hike"></div>
+            <div class="jp-media"><img src="/stories/Havasu/day_1.3.jpg" alt="Havasupai canyon"></div>
+            <div class="jp-media"><img src="/stories/Havasu/day_1.4.jpg" alt="Havasupai village"></div>
+          </div>
+
+          <p>We finally reached Havasu Falls around 2 p.m., in peak heat. And when I saw it? WOW. Turquoise water gushing over red cliffs into a perfect pool. Absolutely stunning. We dropped our packs, set up camp, and sprinted to the falls to swim. The water was icy cold, but after the long, hot hike, it felt like heaven.</p>
+
+          <p>Of course, because it was my first camping trip, we forgot one tiny thing: the rain fly. Cue a sudden downpour that soaked all our stuff. Rookie mistake. Luckily, it passed quickly, and we dried things out while cooking dinner. That night, we hiked back to the falls under the stars. Honestly? Magical.</p>
+
+          <p>Sleeping in a tent wasn't bad either — I was so exhausted, I knocked out. Plus, unzipping the cover and seeing a sky full of stars was soothing.</p>
+
+          <div class="jp-media landscape jp-gif-reel" style="margin: 24px 0;">
+            <video src="/stories/Havasu/day_1.5.mp4" autoplay muted loop playsinline></video>
+          </div>
+        </div>
+
+        <div class="jp-day-section">
+          <h3 class="jp-day-heading">Day II: Mooney Falls &amp; (Almost) Beaver Falls</h3>
+
+          <p>The next morning, we made breakfast and headed out to explore more waterfalls. First stop: Mooney Falls.</p>
+
+          <p>Getting there is an adventure in itself. You descend down the canyon wall using foot holds, chains, and ladders bolted into the rock. It felt like rock climbing, and the mist from the falls made everything slippery. Sketchy, yes. But when we got down? Totally worth it. Mooney is massive — taller than Havasu — with powerful currents we tried (and failed) to swim close to.</p>
+
+          <p>From Mooney, you follow the creek about 3 miles to Beaver Falls. The hike is gorgeous: lush greenery, turquoise pools, and sections where you wade through water. It didn't feel like the Grand Canyon at all — more like a jungle.</p>
+
+          <p>We were almost there when a ranger stopped us. Storm were rolling in, and there was a risk of flash flooding. So we had to turn back. A little heartbreaking, but better safe than sorry.</p>
+
+          <p>By the time we climbed back up to Mooney (with slippery rocks and drizzle), we were wiped. We headed back to camp, only to discover our borrowed JetBoil had run out. So I went wandering around camp like a beggar until a kind group shared theirs with us. Bless the prepared.</p>
+
+          <div class="jp-photo-row" style="grid-template-columns: 1fr 1fr 1fr; margin: 24px 0 12px;">
+            <div class="jp-media"><img src="/stories/Havasu/day_2.1.jpg" alt="Mooney Falls"></div>
+            <div class="jp-media"><img src="/stories/Havasu/day_2.2.jpg" alt="Mooney Falls descent"></div>
+            <div class="jp-media"><img src="/stories/Havasu/day_2.3.jpg" alt="Beaver Falls trail"></div>
+          </div>
+          <div class="jp-photo-row" style="grid-template-columns: 1fr 1fr; margin: 0 0 24px;">
+            <div class="jp-media"><img src="/stories/Havasu/day_2.4.jpg" alt="Creek hike"></div>
+            <div class="jp-media"><img src="/stories/Havasu/day_2.5.jpg" alt="Turquoise pools"></div>
+          </div>
+        </div>
+
+        <div class="jp-day-section">
+          <h3 class="jp-day-heading">Day II Night: The Hike Out</h3>
+
+          <p>We started our trek out at 10 p.m. to beat the heat. Hiking uphill in the dark was tough but also kind of surreal. It was pitch black, and my quads were Texas, so I stubbed my toes on approximately every rock in Arizona.</p>
+
+          <p>On the way out, we passed through Havasupai village again. Here visitors can actually pay about $200 to fly out on a helicopter if they don't want to make the full hike back. One of our friends had sprained his ankle earlier in the day and decided to do just that. He dropped his off at the pad, handed over some of our heavier gear to the helicopter ride, and then the rest of us continued on foot.</p>
+
+          <p>The coolest part? Canyon dogs joined us. Seriously. Three stray dogs trotted alongside us all night like they were our guides. They knew the path better than we did, and we just followed their lead.</p>
+
+          <p>The hike back took about 3 hours. A bit after dawn, we reached the final brutal mile — that 1,000-foot climb out. At that point, we all agreed to go at our own pace. I thought I'd be last, but surprise! I powered through and came in second. Turns out, adrenaline is a hell of a drug.</p>
+
+          <p>When I got to the top at 7AM, sweaty, sore, and running on zero sleep. I looked back at the canyon and thought: "hell yeah. Round two. Let's go." (but not really)</p>
+
+          <div class="jp-photo-row" style="grid-template-columns: 1fr 1fr; margin: 24px 0 12px;">
+            <div class="jp-media"><img src="/stories/Havasu/night_1.jpg" alt="Night hike out" style="object-position: center 85%;"></div>
+            <div class="jp-media jp-gif-reel"><video src="/stories/Havasu/night_2.mp4" autoplay muted loop playsinline></video></div>
+          </div>
+          <div class="jp-photo-row" style="grid-template-columns: 1fr 1fr; margin: 0 0 24px;">
+            <div class="jp-media jp-gif-reel"><video src="/stories/Havasu/night_3.mp4" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video></div>
+            <div class="jp-media"><img src="/stories/Havasu/night_4.jpg" alt="Canyon at dawn"></div>
+          </div>
+        </div>
+
+        <div class="jp-divider-stars">✦ ✦ ✦</div>
+
+        <div class="jp-day-section">
+          <p>This was my first real hiking-and-camping trip, and it was one of the coolest experiences I've ever had. Exhausting? Yes. But the waterfalls, the stars, the canyon dogs, the sheer beauty of being cut off from the world (no data down there!) — all of it made it unforgettable.</p>
+
+          <p>If I go again, I'd camp for at least 2-3 nights instead of one. It would give me time to rest between hikes and enjoy the falls more fully. Honestly, I could have stayed a week: just swimming, relaxing, and being away from civilization.</p>
+
+          <p>If you're into hiking, camping, or just want to challenge yourself, Havasupai is worth it. It's a unique hike — mostly descending rather than climbing in — and a rare chance to experience a hidden oasis.</p>
+
+          <p>Sadly, the area closed for the 2025 season due to flooding damage. But if you ever get the chance in the future, grab it. It's an adventure that stays with you.</p>
+        </div>
+      </div>
+
+      <div class="jp-signoff">
+        <div class="jp-kiss-wrap">
+          <img class="jp-kiss" src="lip_stain.png" alt="">
+          <div class="jp-signoff-name">Avanti</div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="story-cta-wrap">
+    <a href="https://www.foratravel.com/advisor/avanti-vyza" target="_blank" rel="noopener" class="story-cta-primary">Plan a trip like this with me ✈</a>
+    <div class="story-related-block">
+      <div class="story-related-title">Related experiences</div>
+      <div class="story-related-sub">Hand-picked hotels, tours, and gear coming soon.</div>
+    </div>
+    <a href="/" class="story-back-home">← back to all stories</a>
+  </div>
+</article>
+
+</body>
+</html>

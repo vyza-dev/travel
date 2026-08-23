@@ -5688,6 +5688,8 @@ footer {
   box-shadow: 4px 6px 24px rgba(44,26,14,0.1);
   overflow: hidden;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s;
   text-decoration: none;
   color: inherit;
@@ -7609,7 +7611,7 @@ nav.visible {
 
     <div class="polaroid-grid">
 
-      <div class="polaroid-card reveal" data-journal="mishaps" onclick="openJournal('mishaps')">
+      <a class="polaroid-card reveal" href="/stories/europe-mishaps" data-journal="mishaps" onclick="openJournal('mishaps'); return false;">
         <div class="pol-img" data-bg="stories/misshap.JPG" style="background:#3a3a3a;">
           <div class="pol-img-band" style="background:linear-gradient(to top, rgba(44,26,14,0.22), transparent);"></div>
           <span class="pol-tag">Europe</span>
@@ -7618,9 +7620,9 @@ nav.visible {
           <div class="pol-caption-title">Mishaps of a 20-Year-Old</div>
           <div class="pol-caption-year">2016</div>
         </div>
-      </div>
+      </a>
 
-      <div class="polaroid-card reveal" data-journal="yachtweek" onclick="openJournal('yachtweek')">
+      <a class="polaroid-card reveal" href="/stories/yacht-week" data-journal="yachtweek" onclick="openJournal('yachtweek'); return false;">
         <div class="pol-img" data-bg="stories/yachtweek.JPG" style="background:#3a3a3a; background-position:center 70%;">
           <div class="pol-img-band" style="background:linear-gradient(to top, rgba(44,26,14,0.22), transparent);"></div>
           <span class="pol-tag">Europe</span>
@@ -7629,9 +7631,9 @@ nav.visible {
           <div class="pol-caption-title">Yacht Week: Worth It?</div>
           <div class="pol-caption-year">2023</div>
         </div>
-      </div>
+      </a>
 
-      <div class="polaroid-card reveal" data-journal="banos" onclick="openJournal('banos')">
+      <a class="polaroid-card reveal" href="/stories/banos" data-journal="banos" onclick="openJournal('banos'); return false;">
         <div class="pol-img" data-bg="stories/banos.jpeg" style="background:#3a3a3a;">
           <div class="pol-img-band" style="background:linear-gradient(to top, rgba(44,26,14,0.22), transparent);"></div>
           <span class="pol-tag">S. America</span>
@@ -7640,9 +7642,9 @@ nav.visible {
           <div class="pol-caption-title">I Almost Died in Baños</div>
           <div class="pol-caption-year">2024</div>
         </div>
-      </div>
+      </a>
 
-      <div class="polaroid-card reveal" data-journal="havasupai" onclick="openJournal('havasupai')">
+      <a class="polaroid-card reveal" href="/stories/havasupai" data-journal="havasupai" onclick="openJournal('havasupai'); return false;">
         <div class="pol-img" data-bg="stories/havasupai.jpeg" style="background:#3a3a3a;">
           <div class="pol-img-band" style="background:linear-gradient(to top, rgba(44,26,14,0.22), transparent);"></div>
           <span class="pol-tag">USA</span>
@@ -7651,9 +7653,9 @@ nav.visible {
           <div class="pol-caption-title">Chasing Waterfalls in Havasupai</div>
           <div class="pol-caption-year">2024</div>
         </div>
-      </div>
+      </a>
 
-      <div class="polaroid-card reveal" data-journal="tomorrowland" onclick="openJournal('tomorrowland')">
+      <a class="polaroid-card reveal" href="/stories/tomorrowland" data-journal="tomorrowland" onclick="openJournal('tomorrowland'); return false;">
         <div class="pol-img" data-bg="stories/tomorrowland.jpeg" style="background:#3a3a3a; background-position: center 40%;">
           <div class="pol-img-band" style="background:linear-gradient(to top, rgba(44,26,14,0.22), transparent);"></div>
           <span class="pol-tag">Europe</span>
@@ -7662,9 +7664,9 @@ nav.visible {
           <div class="pol-caption-title">Tomorrowland: Tickets, Logistics, My Experience</div>
           <div class="pol-caption-year">2024</div>
         </div>
-      </div>
+      </a>
 
-      <div class="polaroid-card reveal" data-journal="unplanned" onclick="openJournal('unplanned')">
+      <a class="polaroid-card reveal" href="/stories/unplanned" data-journal="unplanned" onclick="openJournal('unplanned'); return false;">
         <div class="pol-img" data-bg="stories/unplanned.jpeg" style="background:#3a3a3a;">
           <div class="pol-img-band" style="background:linear-gradient(to top, rgba(44,26,14,0.22), transparent);"></div>
           <span class="pol-tag">anywhere</span>
@@ -7673,7 +7675,7 @@ nav.visible {
           <div class="pol-caption-title">Unplanned & Unforgettable</div>
           <div class="pol-caption-year">2023 / 2024</div>
         </div>
-      </div>
+      </a>
 
     </div>
 
@@ -10144,7 +10146,7 @@ nav.visible {
 
   <div class="as-grid" id="as-grid">
 
-    <div class="as-entry" data-tags="solo travel,europe,copenhagen,paris,vienna,study abroad" onclick="openJournalFromAllStories('mishaps');">
+    <a class="as-entry" href="/stories/europe-mishaps" data-tags="solo travel,europe,copenhagen,paris,vienna,study abroad" onclick="openJournalFromAllStories('mishaps'); return false;">
       <div class="as-entry-img" style="background:#C8B09A url('stories/misshap.JPG') center/cover no-repeat;">
         <span class="as-entry-tag">Europe</span>
       </div>
@@ -10160,9 +10162,9 @@ nav.visible {
         <div class="as-entry-meta">December 2016 · 12 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
-    </div>
+    </a>
 
-    <div class="as-entry" data-tags="europe,sailing,croatia,trogir,hvar,vis,budget tips" onclick="openJournalFromAllStories('yachtweek');">
+    <a class="as-entry" href="/stories/yacht-week" data-tags="europe,sailing,croatia,trogir,hvar,vis,budget tips" onclick="openJournalFromAllStories('yachtweek'); return false;">
       <div class="as-entry-img" style="background:#A8C5B0 url('stories/yachtweek.JPG') center/cover no-repeat;">
         <span class="as-entry-tag">Europe</span>
       </div>
@@ -10177,9 +10179,9 @@ nav.visible {
         <div class="as-entry-meta">June 2023 · 18 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
-    </div>
+    </a>
 
-    <div class="as-entry" data-tags="solo travel,south america,biking,ecuador,waterfalls,adventure" onclick="openJournalFromAllStories('banos');">
+    <a class="as-entry" href="/stories/banos" data-tags="solo travel,south america,biking,ecuador,waterfalls,adventure" onclick="openJournalFromAllStories('banos'); return false;">
       <div class="as-entry-img" style="background:#C4B882 url('stories/banos.jpeg') center/cover no-repeat;">
         <span class="as-entry-tag">S. America</span>
       </div>
@@ -10194,9 +10196,9 @@ nav.visible {
         <div class="as-entry-meta">2023 · 14 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
-    </div>
+    </a>
 
-    <div class="as-entry" data-tags="usa,hiking,arizona,grand canyon,camping,waterfalls" onclick="openJournalFromAllStories('havasupai');">
+    <a class="as-entry" href="/stories/havasupai" data-tags="usa,hiking,arizona,grand canyon,camping,waterfalls" onclick="openJournalFromAllStories('havasupai'); return false;">
       <div class="as-entry-img" style="background:#9BB5C8 url('stories/havasupai.jpeg') center/cover no-repeat;">
         <span class="as-entry-tag">USA</span>
       </div>
@@ -10211,9 +10213,9 @@ nav.visible {
         <div class="as-entry-meta">August 2024 · 15 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
-    </div>
+    </a>
 
-    <div class="as-entry" data-tags="europe,festivals,belgium,edm,budget tips" onclick="openJournalFromAllStories('tomorrowland');">
+    <a class="as-entry" href="/stories/tomorrowland" data-tags="europe,festivals,belgium,edm,budget tips" onclick="openJournalFromAllStories('tomorrowland'); return false;">
       <div class="as-entry-img" style="background:#B8A8C8 url('stories/tomorrowland.jpeg') center 40%/cover no-repeat;">
         <span class="as-entry-tag">Europe</span>
       </div>
@@ -10228,9 +10230,9 @@ nav.visible {
         <div class="as-entry-meta">July 2024 · 16 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
-    </div>
+    </a>
 
-    <div class="as-entry" data-tags="solo travel,europe,south america,albania,argentina,ecuador,travel advice" onclick="openJournalFromAllStories('unplanned');">
+    <a class="as-entry" href="/stories/unplanned" data-tags="solo travel,europe,south america,albania,argentina,ecuador,travel advice" onclick="openJournalFromAllStories('unplanned'); return false;">
       <div class="as-entry-img" style="background:#C8B89A url('stories/unplanned.jpeg') center 65%/cover no-repeat;">
         <span class="as-entry-tag">anywhere</span>
       </div>
@@ -10246,7 +10248,7 @@ nav.visible {
         <div class="as-entry-meta">2023 · 10 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
-    </div>
+    </a>
 
     <div id="as-no-results" style="display:none;text-align:center;padding:60px 20px;color:var(--ink-mid,#5C3D2E);font-family:'Lora',serif;">
       <div style="font-size:28px;margin-bottom:12px;">nothing here... yet</div>

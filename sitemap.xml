@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://avyzaventures.netlify.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://avyzaventures.netlify.app/og-image.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://avyzaventures.netlify.app/stories/yacht-week</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://avyzaventures.netlify.app/stories/yachtweek.JPG</image:loc>
+      <image:caption>Yacht Week Croatia — worth it? A full breakdown of the Croatia route with costs and booking tips.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://avyzaventures.netlify.app/stories/havasupai</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://avyzaventures.netlify.app/stories/havasupai.jpeg</image:loc>
+      <image:caption>Chasing waterfalls in Havasupai — hiking permits, camping, and the trek to the blue-green pools.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://avyzaventures.netlify.app/stories/tomorrowland</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://avyzaventures.netlify.app/stories/tomorrowland.jpeg</image:loc>
+      <image:caption>Tomorrowland festival — how to get tickets, logistics, and my full experience in Boom, Belgium.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://avyzaventures.netlify.app/stories/banos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://avyzaventures.netlify.app/stories/banos.jpeg</image:loc>
+      <image:caption>Solo biking in Baños, Ecuador — the day I almost died chasing waterfalls in Ecuador's adventure capital.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://avyzaventures.netlify.app/stories/europe-mishaps</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://avyzaventures.netlify.app/stories/misshap.JPG</image:loc>
+      <image:caption>Mishaps of a 20-year-old solo backpacking Europe — the funny, embarrassing, formative stories.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://avyzaventures.netlify.app/stories/unplanned</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://avyzaventures.netlify.app/stories/unplanned.jpeg</image:loc>
+      <image:caption>Unplanned and unforgettable — how the best trips happen when you throw out the itinerary.</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
