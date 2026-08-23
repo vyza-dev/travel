@@ -839,20 +839,26 @@ nav.nav-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(
 
   /* Card: trim internal padding so image gets more room.
      padding-bottom matches caption area height below.
+     Bumped 44→62 so multi-line titles (Tomorrowland, Havasupai) have room
+     to breathe in the white caption area instead of overflowing up into
+     the bottom edge of the photo.
      !important needed: desktop rule at ~1569 has same specificity, comes later. */
   #main-site .polaroid-card {
-    padding: 8px 8px 44px !important;
+    padding: 8px 8px 62px !important;
   }
 
-  /* Caption area: match the reduced padding-bottom on the card */
+  /* Caption area: taller to fit up to ~3 lines of title text, with a small
+     top buffer so text never sits flush against the photo above. */
   #main-site .pol-caption-area {
-    height: 44px !important;
-    padding: 0 6px !important;
+    height: 62px !important;
+    padding: 6px 6px 4px !important;
     gap: 2px !important;
   }
-  /* Caption title: drop to 13px so titles fit on one line more often */
+  /* Caption title: 13px + tighter line-height so multi-line titles are
+     both readable and don't stack too tall in the caption box. */
   #main-site .pol-caption-title {
     font-size: 13px !important;
+    line-height: 1.15 !important;
   }
   /* Year: scale down to match */
   #main-site .pol-caption-year {
@@ -10400,19 +10406,52 @@ function skipIntro() {
    from both the mobile (if) branch and the desktop (else) ScrollTrigger.
    Was previously nested inside the else block; on mobile, Annex B
    semantics meant the outer binding stayed undefined, so calling it
-   from the if branch threw a TypeError and halted the entire script. */
+   from the if branch threw a TypeError and halted the entire script.
+
+   Now IntersectionObserver-based: hero + about polaroids load immediately
+   (above-the-fold on every device), everything else loads as it approaches
+   the viewport. Before, all ~30 background images downloaded at once when
+   the page opened, which saturated mobile connections — users would
+   swipe past cards before images could arrive. Now the network only fetches
+   what the user is about to see. */
+function loadBgImage(el) {
+  var src = el.getAttribute('data-bg');
+  if (!src) return;
+  el.style.backgroundImage = "url('" + src + "')";
+  el.style.backgroundSize = 'cover';
+  if (!el.style.backgroundPosition) {
+    el.style.backgroundPosition = el.getAttribute('data-bg-pos') || 'center';
+  }
+  el.removeAttribute('data-bg');
+}
+
 function lazyLoadImages() {
-  document.querySelectorAll('[data-bg]').forEach(function(el) {
-    var src = el.getAttribute('data-bg');
-    if (src) {
-      el.style.backgroundImage = "url('" + src + "')";
-      el.style.backgroundSize = 'cover';
-      if (!el.style.backgroundPosition) {
-        el.style.backgroundPosition = el.getAttribute('data-bg-pos') || 'center';
+  /* Eagerly load anything above-the-fold. Hero polaroids are visible
+     immediately on both mobile and desktop; loading them via observer
+     would cause a visible flash. */
+  var eagerSelectors = '.hero [data-bg], .about-polaroid [data-bg], .wm-mini-polaroid [data-bg]';
+  document.querySelectorAll(eagerSelectors).forEach(loadBgImage);
+
+  /* Everything else — journal cards, hotels, story pols — loads as it
+     approaches the viewport. 600px rootMargin means: start fetching when
+     the image is within ~600px of scrolling into view, which on mobile
+     is about one screen ahead. Balance between "already loaded when you
+     get there" and "don't blast the network on page open." */
+  var remaining = document.querySelectorAll('[data-bg]');
+  if (!('IntersectionObserver' in window)) {
+    /* Fallback for very old browsers: load everything immediately. */
+    remaining.forEach(loadBgImage);
+    return;
+  }
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        loadBgImage(e.target);
+        obs.unobserve(e.target);
       }
-      el.removeAttribute('data-bg');
-    }
-  });
+    });
+  }, { rootMargin: '600px 0px' });
+  remaining.forEach(function(el) { obs.observe(el); });
 }
 
 /* ── Same fix — triggerTransition was nested inside the else block,
