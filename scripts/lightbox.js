@@ -1,8 +1,15 @@
 /* ─────────────────────────────────────────────────────────────
-   Photo lightbox for A Vyza Ventures story pages
-   Ported from the removed homepage modal's initPhotoLightbox().
-   Self-contained: injects its own CSS + overlay HTML on load,
-   then wires click-to-zoom on every .jp-media img (not video, not reel).
+   Story-page enhancements for A Vyza Ventures
+   (kept in lightbox.js to avoid a second script tag per page).
+
+   Two features, both ported from the removed homepage modal:
+     1. Photo lightbox — click any inline .jp-media img to zoom.
+     2. Signoff reveal — sparkle stars + kiss stamp animation
+        triggered when the .jp-signoff scrolls into view.
+
+   Self-contained: injects its own CSS + lightbox overlay HTML +
+   sparkle-star spans on load. Just link this from any story page:
+     <script src="/scripts/lightbox.js" defer></script>
    ───────────────────────────────────────────────────────────── */
 (function() {
   'use strict';
@@ -85,5 +92,53 @@
     document.addEventListener('DOMContentLoaded', wireImages);
   } else {
     wireImages();
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // Signoff reveal — kiss + sparkle stars + name animation
+  // Ported from the removed homepage modal's initSignoffReveal().
+  // .jp-kiss starts at opacity:0 in the base CSS; the animation
+  // (kiss stamps down, stars scatter, name signs) is triggered by
+  // adding .is-signed to the .jp-signoff parent when it scrolls
+  // into view.
+  // ─────────────────────────────────────────────────────────────
+  function initSignoff() {
+    var signoffs = document.querySelectorAll('.jp-signoff');
+    if (!signoffs.length) return;
+
+    // Inject 6 sparkle stars into each .jp-kiss-wrap (CSS positions and
+    // animates them absolutely; without these spans there are no stars).
+    signoffs.forEach(function(signoff) {
+      var kissWrap = signoff.querySelector('.jp-kiss-wrap');
+      if (!kissWrap || kissWrap.dataset.starsInjected === '1') return;
+      kissWrap.dataset.starsInjected = '1';
+      ['jp-star-1','jp-star-2','jp-star-3','jp-star-4','jp-star-5','jp-star-6'].forEach(function(cls) {
+        var star = document.createElement('span');
+        star.className = 'jp-star ' + cls;
+        star.textContent = '✦'; // ✦
+        kissWrap.appendChild(star);
+      });
+    });
+
+    // Reveal on scroll into view; re-trigger if user scrolls back up
+    // and then down again (matches homepage behavior).
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.remove('is-signed');
+          void e.target.offsetWidth; // force reflow so animation restarts
+          e.target.classList.add('is-signed');
+        } else {
+          e.target.classList.remove('is-signed');
+        }
+      });
+    }, { threshold: 0.25 });
+    signoffs.forEach(function(el) { obs.observe(el); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSignoff);
+  } else {
+    initSignoff();
   }
 })();
