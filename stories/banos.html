@@ -1494,7 +1494,7 @@ body {
 <body>
 
 <div class="jp-close-bar" style="position:sticky;top:0;z-index:100;background:rgba(44,26,14,0.95);backdrop-filter:blur(12px);">
-  <a href="/" class="jp-back" style="text-decoration:none;"><span class="jp-back-arrow">←</span> back to a vyza ventures</a>
+  <a href="/#journal" class="jp-back" style="text-decoration:none;" onclick="if(document.referrer && document.referrer.indexOf(location.origin)===0){history.back();return false;}"><span class="jp-back-arrow">←</span> back to travel journal</a>
   <div class="jp-nav-title">a vyza ventures — travel journal</div>
 </div>
 
@@ -1673,7 +1673,9 @@ body {
 
             <!-- Left: diablo1 portrait video (9:16) — drives total height -->
             <div style="width:30%; aspect-ratio:9/16; flex-shrink:0;">
-              <div class="jp-video-block" id="jp-banos-diablo-slot" style="height:100%; width:100%;"></div>
+              <div class="jp-video-block" id="jp-banos-diablo-slot" style="height:100%; width:100%;">
+                <video src="/stories/banos/diablo1.mp4" autoplay muted loop playsinline style="display:block;width:100%;height:100%;object-fit:cover;"></video>
+              </div>
             </div>
 
             <!-- Right: column with top row (diablo2/3/4) + bottom (diablo5) -->
@@ -1823,7 +1825,7 @@ body {
       </a>
       </div>
     </div>
-    <a href="/" class="story-back-home">← back to all stories</a>
+    <a href="/#journal" class="story-back-home" onclick="if(document.referrer && document.referrer.indexOf(location.origin)===0){history.back();return false;}">← back to travel journal</a>
   </div>
 </article>
 
