@@ -1379,13 +1379,97 @@ body {
   transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 40px;
 }
 .story-cta-primary:hover { transform: translateY(-2px); box-shadow: 2px 6px 0 rgba(0,0,0,0.2); }
+/* Related tours block — replaces the placeholder */
 .story-related-block {
-  margin-top: 40px; padding: 32px 24px;
+  margin-top: 40px;
+  padding: 24px;
   background: rgba(193, 122, 80, 0.06);
-  border: 1px dashed rgba(193, 122, 80, 0.3); border-radius: 8px;
+  border: 1px dashed rgba(193, 122, 80, 0.3);
+  border-radius: 8px;
 }
-.story-related-title { font-family: 'Caveat', cursive; font-size: 26px; color: #2C1A0E; margin-bottom: 8px; }
-.story-related-sub { font-family: 'Lora', serif; font-size: 14px; color: rgba(44,26,14,0.6); font-style: italic; }
+.story-related-header { text-align: center; margin-bottom: 20px; }
+.story-related-title {
+  font-family: 'Caveat', cursive;
+  font-size: 26px;
+  color: #2C1A0E;
+  margin-bottom: 8px;
+}
+.story-related-sub {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  color: rgba(44,26,14,0.55);
+  font-style: italic;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.story-tours-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+  text-align: left;
+}
+.story-tour-card {
+  display: block;
+  padding: 14px;
+  background: white;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  border: 1px solid rgba(193, 122, 80, 0.15);
+}
+.story-tour-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  border-color: rgba(193, 122, 80, 0.4);
+}
+.story-tour-title {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #2C1A0E;
+  margin-bottom: 10px;
+}
+.story-tour-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  font-family: 'Lora', serif;
+  font-size: 12px;
+}
+.story-tour-rating { color: #C17A50; font-weight: 700; }
+.story-tour-reviews { color: rgba(44,26,14,0.55); }
+.story-tour-cancel {
+  font-size: 11px;
+  padding: 2px 6px;
+  background: rgba(74, 107, 82, 0.12);
+  color: #4A6B52;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.story-tour-price {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  font-weight: 700;
+  color: #C17A50;
+}
+.story-tour-price span {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  color: rgba(44,26,14,0.6);
+  font-weight: normal;
+  font-style: italic;
+  margin-left: 6px;
+}
+@media (max-width: 640px) {
+  .story-tours-grid { grid-template-columns: 1fr; }
+}
 .story-back-home {
   display: inline-block; margin-top: 32px;
   font-family: 'Lora', serif; font-size: 15px;
@@ -1645,8 +1729,66 @@ body {
   <div class="story-cta-wrap">
     <a href="https://www.foratravel.com/advisor/avanti-vyza" target="_blank" rel="noopener" class="story-cta-primary">Plan a trip like this with me ✈</a>
     <div class="story-related-block">
-      <div class="story-related-title">Related experiences</div>
-      <div class="story-related-sub">Hand-picked hotels, tours, and gear coming soon.</div>
+      <div class="story-related-header">
+        <div class="story-related-title">Book something like this &rarr;</div>
+        <div class="story-related-sub">Hand-picked tours from Viator. These are affiliate links, so I earn a small commission if you book &mdash; at no extra cost to you.</div>
+      </div>
+      <div class="story-tours-grid">
+      <a href="https://www.viator.com/tours/Split/Blue-Cave-and-Hvar-Island-5-Islands-Tour-With-Speed-Boat-from-Split-or-Trogir/d4185-16729P1?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-yacht-week-16729p1" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Blue Cave, Mamma Mia and Hvar, 5 Islands Speed boat Small group</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.84</span>
+          <span class="story-tour-reviews">(8,406 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;118<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Dubrovnik/Explore-the-Elaphite/d904-28491P9?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-yacht-week-28491p9" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Private Elaphiti Islands Boat Tour from Dubrovnik</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.98</span>
+          <span class="story-tour-reviews">(507 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;595<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Split/Krka-waterfalls-tour-and-wine-tasting/d4185-73575P12?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-yacht-week-73575p12" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">From Split: Krka Waterfalls, Food &amp; Wine Tasting Tour</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.91</span>
+          <span class="story-tour-reviews">(10,696 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;46<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Dubrovnik/Dubrovnik-Food-and-Drink-Walking-Tour-with-a-Local-Guide/d904-49470P1?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-yacht-week-49470p1" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Dubrovnik Food and Drink Walking Tour with a Local Guide</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.95</span>
+          <span class="story-tour-reviews">(695 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;167<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Split/Blue-Cave-and-Hvar-Tour-from-Split/d4185-17622P2?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-yacht-week-17622p2" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Blue Cave and Hvar Tour - 5 Islands Tour from Split and Trogir</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.88</span>
+          <span class="story-tour-reviews">(6,110 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;119<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Trogir/Five-islands-speedboat-tour-featuring-Blue-cave-and-Hvar-from-TROGIR/d36946-16729P27?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-yacht-week-16729p27" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Blue Cave, Mama Mia and Hvar, 5 Island Speed boat Small group</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.94</span>
+          <span class="story-tour-reviews">(4,152 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;113<span>&rarr; Book on Viator</span></div>
+      </a>
+      </div>
     </div>
     <a href="/" class="story-back-home">← back to all stories</a>
   </div>

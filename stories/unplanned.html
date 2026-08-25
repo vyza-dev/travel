@@ -1379,13 +1379,97 @@ body {
   transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 40px;
 }
 .story-cta-primary:hover { transform: translateY(-2px); box-shadow: 2px 6px 0 rgba(0,0,0,0.2); }
+/* Related tours block — replaces the placeholder */
 .story-related-block {
-  margin-top: 40px; padding: 32px 24px;
+  margin-top: 40px;
+  padding: 24px;
   background: rgba(193, 122, 80, 0.06);
-  border: 1px dashed rgba(193, 122, 80, 0.3); border-radius: 8px;
+  border: 1px dashed rgba(193, 122, 80, 0.3);
+  border-radius: 8px;
 }
-.story-related-title { font-family: 'Caveat', cursive; font-size: 26px; color: #2C1A0E; margin-bottom: 8px; }
-.story-related-sub { font-family: 'Lora', serif; font-size: 14px; color: rgba(44,26,14,0.6); font-style: italic; }
+.story-related-header { text-align: center; margin-bottom: 20px; }
+.story-related-title {
+  font-family: 'Caveat', cursive;
+  font-size: 26px;
+  color: #2C1A0E;
+  margin-bottom: 8px;
+}
+.story-related-sub {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  color: rgba(44,26,14,0.55);
+  font-style: italic;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.story-tours-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+  text-align: left;
+}
+.story-tour-card {
+  display: block;
+  padding: 14px;
+  background: white;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  border: 1px solid rgba(193, 122, 80, 0.15);
+}
+.story-tour-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  border-color: rgba(193, 122, 80, 0.4);
+}
+.story-tour-title {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #2C1A0E;
+  margin-bottom: 10px;
+}
+.story-tour-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  font-family: 'Lora', serif;
+  font-size: 12px;
+}
+.story-tour-rating { color: #C17A50; font-weight: 700; }
+.story-tour-reviews { color: rgba(44,26,14,0.55); }
+.story-tour-cancel {
+  font-size: 11px;
+  padding: 2px 6px;
+  background: rgba(74, 107, 82, 0.12);
+  color: #4A6B52;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.story-tour-price {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  font-weight: 700;
+  color: #C17A50;
+}
+.story-tour-price span {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  color: rgba(44,26,14,0.6);
+  font-weight: normal;
+  font-style: italic;
+  margin-left: 6px;
+}
+@media (max-width: 640px) {
+  .story-tours-grid { grid-template-columns: 1fr; }
+}
 .story-back-home {
   display: inline-block; margin-top: 32px;
   font-family: 'Lora', serif; font-size: 15px;
@@ -1507,8 +1591,66 @@ body {
   <div class="story-cta-wrap">
     <a href="https://www.foratravel.com/advisor/avanti-vyza" target="_blank" rel="noopener" class="story-cta-primary">Plan a trip like this with me ✈</a>
     <div class="story-related-block">
-      <div class="story-related-title">Related experiences</div>
-      <div class="story-related-sub">Hand-picked hotels, tours, and gear coming soon.</div>
+      <div class="story-related-header">
+        <div class="story-related-title">Book something like this &rarr;</div>
+        <div class="story-related-sub">Hand-picked tours from Viator. These are affiliate links, so I earn a small commission if you book &mdash; at no extra cost to you.</div>
+      </div>
+      <div class="story-tours-grid">
+      <a href="https://www.viator.com/tours/Tirana/Shala-river-From-Tirana-Private-tour-All-inclusive-by-Smart-Tour-Albania/d23957-111719P22?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-albania-111719p22" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Shala river &amp; Komani lake -Day trip from Tirana/Durres/ Shkodra</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.84</span>
+          <span class="story-tour-reviews">(455 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;21<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Saranda/SARANDA-JEEP-SAFARI-for-hotel-in-Saranda-and-Ksamil/d50197-75474P3?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-albania-75474p3" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Saranda Jeep Tour, Blue Eye, Castle, Secret Beach &amp; Off-Road</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.85</span>
+          <span class="story-tour-reviews">(179 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;60<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Tirana/Albanian-Night-Traditional-Music-Dance-and-Dinner-Show-in-Tirana/d23957-5543994P1?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-albania-5543994p1" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Albanian Night Show: Traditional Music, Dance &amp; Dinner in Tirana</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.89</span>
+          <span class="story-tour-reviews">(732 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;52<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Permet/Rafting-the-wild-Vjosa-river/d51663-86274P3?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-albania-86274p3" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Rafting Vjosa River Gjirokastër Albania ARG</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.78</span>
+          <span class="story-tour-reviews">(203 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;54<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Tirana/Explore-3-bazaars-and-enjoy-local-street-food-in-Tirana-day-tour/d23957-10132P45?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-albania-10132p45" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Local food experience &amp; walking tour of Tirana</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.96</span>
+          <span class="story-tour-reviews">(216 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;65<span>&rarr; Book on Viator</span></div>
+      </a>
+      <a href="https://www.viator.com/tours/Tirana/Traditional-Albaniain-Food-Cooking-Class/d23957-471912P1?mcid=42383&amp;pid=P00267083&amp;medium=api&amp;api_version=2.0&amp;campaign=story-albania-471912p1" class="story-tour-card" target="_blank" rel="sponsored noopener">
+        <div class="story-tour-title">Traditional Albanian Cooking Class in Tirana with Raki Tasting</div>
+        <div class="story-tour-meta">
+          <span class="story-tour-rating">&#9733; 4.98</span>
+          <span class="story-tour-reviews">(167 reviews)</span>
+          <span class="story-tour-cancel">Free cancellation</span>
+        </div>
+        <div class="story-tour-price">From &#36;54<span>&rarr; Book on Viator</span></div>
+      </a>
+      </div>
     </div>
     <a href="/" class="story-back-home">← back to all stories</a>
   </div>
