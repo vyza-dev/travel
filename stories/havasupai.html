@@ -1414,7 +1414,7 @@ body {
 }
 .story-tours-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-top: 20px;
   text-align: left;
@@ -1476,7 +1476,10 @@ body {
   font-style: italic;
   margin-left: 6px;
 }
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+  .story-tours-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
   .story-tours-grid { grid-template-columns: 1fr; }
 }
 .story-back-home {
