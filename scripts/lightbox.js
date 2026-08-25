@@ -1,14 +1,17 @@
 /* ─────────────────────────────────────────────────────────────
    Story-page enhancements for A Vyza Ventures
-   (kept in lightbox.js to avoid a second script tag per page).
+   (all kept in lightbox.js so story pages only need one script tag).
 
-   Two features, both ported from the removed homepage modal:
+   Three features, all ported from the removed homepage modal:
      1. Photo lightbox — click any inline .jp-media img to zoom.
      2. Signoff reveal — sparkle stars + kiss stamp animation
         triggered when the .jp-signoff scrolls into view.
+     3. Video controls — mute/unmute + play/pause + restart-on-first-
+        unmute for .jp-reel and .jp-gif-reel videos (audio you tap
+        to hear on biking/festival/etc. clips).
 
    Self-contained: injects its own CSS + lightbox overlay HTML +
-   sparkle-star spans on load. Just link this from any story page:
+   sparkle spans + video control buttons on load. Just link:
      <script src="/scripts/lightbox.js" defer></script>
    ───────────────────────────────────────────────────────────── */
 (function() {
@@ -140,5 +143,172 @@
     document.addEventListener('DOMContentLoaded', initSignoff);
   } else {
     initSignoff();
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // Video controls — mute/unmute + play/pause + restart-on-unmute
+  // Ported from the removed homepage modal's initJournalVideos().
+  //
+  // Two flavors of video wrapper, both handled here:
+  //   .jp-reel     — larger reels with a fullscreen expand button
+  //                  and a volume icon that already exists in the DOM
+  //   .jp-gif-reel — smaller GIF-style loops that get a sound button
+  //                  injected next to them (banos biking, tomorrowland
+  //                  festival, yacht-week Day 6, etc.)
+  //
+  // Both share the same UX contract: the loop autoplays muted; on the
+  // FIRST tap of the sound button, the clip restarts from 0 so the
+  // audio makes sense from the start of the story. Subsequent taps
+  // just toggle mute in place.
+  // ─────────────────────────────────────────────────────────────
+  var SVG_MUTED = '<svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>';
+  var SVG_UNMUTED = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>';
+  var SVG_PLAY = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+  var SVG_EXPAND = '<svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>';
+
+  function wireReel(wrap) {
+    if (wrap.dataset.reelWired === '1') return;
+    wrap.dataset.reelWired = '1';
+    var video = wrap.querySelector('video');
+    if (!video) return;
+
+    var ppOverlay = document.createElement('div');
+    ppOverlay.className = 'jp-reel-playpause';
+    ppOverlay.innerHTML = SVG_PLAY;
+    wrap.appendChild(ppOverlay);
+
+    var expandBtn = document.createElement('div');
+    expandBtn.className = 'jp-reel-expand';
+    expandBtn.title = 'Fullscreen';
+    expandBtn.innerHTML = SVG_EXPAND;
+    wrap.appendChild(expandBtn);
+
+    var hint = document.createElement('div');
+    hint.className = 'jp-reel-muted-hint';
+    hint.textContent = 'tap for sound';
+    wrap.appendChild(hint);
+
+    var hasUnmuted = false;
+    var volIcon = wrap.querySelector('.jp-reel-icon');
+
+    function updateVolIcon() {
+      if (!volIcon) return;
+      volIcon.innerHTML = video.muted ? SVG_MUTED : SVG_UNMUTED;
+    }
+    updateVolIcon();
+
+    function unmute() {
+      if (!hasUnmuted) { video.currentTime = 0; hasUnmuted = true; }
+      video.muted = false;
+      video.volume = 1.0;
+      if (video.paused) video.play().catch(function(){});
+      updateVolIcon();
+      hint.style.opacity = '0';
+      wrap.classList.remove('is-paused');
+    }
+
+    if (volIcon) {
+      volIcon.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (video.muted) { unmute(); }
+        else { video.muted = true; updateVolIcon(); hint.style.opacity = ''; }
+      });
+    }
+
+    expandBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (video.requestFullscreen) video.requestFullscreen();
+      else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+      else if (video.mozRequestFullScreen) video.mozRequestFullScreen();
+    });
+
+    wrap.addEventListener('click', function(e) {
+      if (e.target.closest('.jp-reel-icon') || e.target.closest('.jp-reel-expand')) return;
+      e.preventDefault();
+      if (video.muted) { unmute(); return; }
+      if (video.paused) {
+        video.play().catch(function(){});
+        wrap.classList.remove('is-paused');
+        wrap.classList.add('play-flash');
+        setTimeout(function() { wrap.classList.remove('play-flash'); }, 400);
+      } else {
+        video.pause();
+        wrap.classList.add('is-paused');
+      }
+    });
+
+    video.addEventListener('pause', function() { wrap.classList.add('is-paused'); });
+    video.addEventListener('play',  function() { wrap.classList.remove('is-paused'); });
+  }
+
+  function wireGifReel(wrap) {
+    if (wrap.dataset.gifReelWired === '1') return;
+    wrap.dataset.gifReelWired = '1';
+    var video = wrap.querySelector('video');
+    if (!video) return;
+
+    var ppBtn = document.createElement('div');
+    ppBtn.className = 'jp-reel-playpause';
+    ppBtn.innerHTML = SVG_PLAY;
+    wrap.appendChild(ppBtn);
+
+    var sndBtn = document.createElement('button');
+    sndBtn.className = 'jp-d4-sound-btn';
+    sndBtn.setAttribute('type', 'button');
+    sndBtn.setAttribute('aria-label', 'Toggle sound');
+    sndBtn.innerHTML = SVG_MUTED;
+
+    var hint = document.createElement('div');
+    hint.className = 'jp-d4-hint';
+    hint.textContent = 'tap for sound';
+
+    function updateIcon() {
+      sndBtn.innerHTML = video.muted ? SVG_MUTED : SVG_UNMUTED;
+      hint.style.opacity = video.muted ? '1' : '0';
+    }
+
+    var hasUnmuted = false;
+    sndBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (video.muted) {
+        if (!hasUnmuted) { video.currentTime = 0; hasUnmuted = true; }
+        video.muted = false;
+        video.volume = 1.0;
+        if (video.paused) video.play().catch(function(){});
+        wrap.classList.remove('is-paused');
+      } else {
+        video.muted = true;
+      }
+      updateIcon();
+    });
+
+    wrap.addEventListener('click', function(e) {
+      if (e.target.closest('.jp-d4-sound-btn')) return;
+      e.preventDefault();
+      if (video.paused) {
+        video.play().catch(function(){});
+        wrap.classList.remove('is-paused');
+      } else {
+        video.pause();
+        wrap.classList.add('is-paused');
+      }
+    });
+
+    video.addEventListener('pause', function() { wrap.classList.add('is-paused'); });
+    video.addEventListener('play',  function() { wrap.classList.remove('is-paused'); });
+
+    wrap.appendChild(sndBtn);
+    wrap.appendChild(hint);
+  }
+
+  function initVideos() {
+    document.querySelectorAll('.jp-reel').forEach(wireReel);
+    document.querySelectorAll('.jp-gif-reel').forEach(wireGifReel);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initVideos);
+  } else {
+    initVideos();
   }
 })();
