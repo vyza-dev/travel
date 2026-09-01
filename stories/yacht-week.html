@@ -1489,6 +1489,44 @@ body {
   border-bottom: 1px solid rgba(44,26,14,0.3);
 }
 .story-back-home:hover { color: #C17A50; border-bottom-color: #C17A50; }
+
+/* Story-page footer with FTC + Amazon Associates disclosure —
+   required on every page carrying affiliate links. Sits below the
+   CTA block, above the lightbox script tag. */
+.story-footer {
+  border-top: 1px solid rgba(44, 26, 14, 0.12);
+  padding: 24px 24px 40px;
+  margin: 0 24px;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.story-footer-brand {
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  color: rgba(44, 26, 14, 0.55);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.story-footer-brand span { color: var(--terracotta, #C4623A); }
+.story-footer-brand:hover { color: rgba(44, 26, 14, 0.85); }
+.story-footer-disclosure {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(44, 26, 14, 0.55);
+  font-style: italic;
+  max-width: 720px;
+  margin: 0 auto 8px;
+}
+.story-footer-note {
+  font-family: 'Lora', serif;
+  font-size: 11px;
+  color: rgba(44, 26, 14, 0.4);
+  margin-top: 8px;
+}
 </style>
 </head>
 <body>
@@ -1598,7 +1636,7 @@ body {
             <video src="/stories/yacht-week/Day1.mp4" autoplay muted loop playsinline></video>
           </div>
           <h3 class="jp-day-heading">Day I: Trogir &amp; Opening Party</h3>
-          <p>Day 1 wasn't too wild for us. It was mostly logistics: meeting our skipper and host, getting settled on the boat, grocery shopping, raising all of our flags (bring fun flags to add to the sail), all that good stuff. Nothing major happens on this day, but the excitement in the air is real — everyone's buzzing for the week ahead.</p>
+          <p>Day 1 wasn't too wild for us. It was mostly logistics: meeting our skipper and host, getting settled on the boat, grocery shopping, raising all of our flags (bring <a href="https://amzn.to/4ygTAjG" target="_blank" rel="nofollow sponsored noopener" style="color:var(--terracotta); text-decoration:underline;">fun flags</a> to add to the sail), all that good stuff. Nothing major happens on this day, but the excitement in the air is real — everyone's buzzing for the week ahead.</p>
 
           <div class="jp-pro-tips">
             <div class="jp-pro-tips-title">Pro Tip:</div>
@@ -1810,6 +1848,14 @@ body {
 
 
 <!-- Photo lightbox: click any inline story photo to view full-screen -->
+<footer class="story-footer">
+  <a href="/" class="story-footer-brand">a <span>vyza</span> ventures</a>
+  <div class="story-footer-disclosure">
+    As an Amazon Associate, I earn from qualifying purchases. Some links on this site are affiliate links &mdash; if you book or buy through them I may earn a small commission at no extra cost to you. I only recommend things I've actually used.
+  </div>
+  <div class="story-footer-note">&copy; 2026 a vyza ventures</div>
+</footer>
+
 <script src="/scripts/lightbox.js" defer></script>
 </body>
 </html>

@@ -32,6 +32,16 @@
   </url>
 
   <url>
+    <loc>https://avyzaventures.netlify.app/stories/havasupai-packing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://avyzaventures.netlify.app/stories/havasupai.jpeg</image:loc>
+      <image:caption>What I packed for Havasupai — the exact gear that survived a 10-mile canyon hike, and the one thing I forgot.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://avyzaventures.netlify.app/stories/tomorrowland</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

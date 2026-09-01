@@ -1402,6 +1402,40 @@ body {
   border-bottom: 1px solid rgba(44,26,14,0.3);
 }
 .story-back-home:hover { color: #C17A50; border-bottom-color: #C17A50; }
+
+/* Story-page footer with FTC + Amazon Associates disclosure */
+.story-footer {
+  border-top: 1px solid rgba(44, 26, 14, 0.12);
+  padding: 24px 24px 40px;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+.story-footer-brand {
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  color: rgba(44, 26, 14, 0.55);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.story-footer-brand span { color: var(--terracotta, #C4623A); }
+.story-footer-brand:hover { color: rgba(44, 26, 14, 0.85); }
+.story-footer-disclosure {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(44, 26, 14, 0.55);
+  font-style: italic;
+  max-width: 720px;
+  margin: 0 auto 8px;
+}
+.story-footer-note {
+  font-family: 'Lora', serif;
+  font-size: 11px;
+  color: rgba(44, 26, 14, 0.4);
+  margin-top: 8px;
+}
 </style>
 </head>
 <body>
@@ -1570,6 +1604,14 @@ body {
 
 
 <!-- Photo lightbox: click any inline story photo to view full-screen -->
+<footer class="story-footer">
+  <a href="/" class="story-footer-brand">a <span>vyza</span> ventures</a>
+  <div class="story-footer-disclosure">
+    As an Amazon Associate, I earn from qualifying purchases. Some links on this site are affiliate links &mdash; if you book or buy through them I may earn a small commission at no extra cost to you. I only recommend things I've actually used.
+  </div>
+  <div class="story-footer-note">&copy; 2026 a vyza ventures</div>
+</footer>
+
 <script src="/scripts/lightbox.js" defer></script>
 </body>
 </html>

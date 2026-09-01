@@ -4250,9 +4250,11 @@ footer {
 
 .footer-bottom {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 8px;
+  gap: 10px;
+  padding-top: 12px;
   margin-top: 10px;
   border-top: 1px solid rgba(255,255,255,0.12);
 }
@@ -4261,6 +4263,20 @@ footer {
   font-family: 'Caveat', cursive;
   font-size: 11px;
   color: rgba(255,255,255,0.3);
+}
+
+/* FTC + Amazon Associates disclosure — required on every page carrying
+   affiliate links. Small but readable (not grey-on-grey); reads as an
+   honest footnote, not fine print. */
+.footer-disclosure {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.55);
+  font-style: italic;
+  max-width: 780px;
+  text-align: center;
+  padding: 0 20px;
 }
 
 
@@ -9067,6 +9083,9 @@ nav.visible {
   </div>
   <div class="footer-bottom">
     <div class="footer-note">&copy; 2026 a vyza ventures</div>
+    <div class="footer-disclosure">
+      As an Amazon Associate, I earn from qualifying purchases. Some links on this site are affiliate links — if you book or buy through them I may earn a small commission at no extra cost to you. I only recommend things I've actually used.
+    </div>
   </div>
 </footer>
 </div>
@@ -9210,6 +9229,23 @@ nav.visible {
         <div class="as-entry-title">Unplanned & Unforgettable</div>
         <div class="as-entry-desc">Why traveling without a plan has led me to some of the most rewarding experiences of my life.</div>
         <div class="as-entry-meta">2023 · 10 min read</div>
+        <div class="as-entry-read">read this story →</div>
+      </div>
+    </a>
+
+    <a class="as-entry" href="/stories/havasupai-packing" data-tags="usa,hiking,arizona,camping,packing,gear">
+      <div class="as-entry-img" style="background:#9BB5C8 url('stories/havasupai.jpeg') center/cover no-repeat;">
+        <span class="as-entry-tag">Packing List</span>
+      </div>
+      <div class="as-entry-body">
+        <div class="as-entry-tags">
+          <span class="as-entry-pill">packing</span>
+          <span class="as-entry-pill">gear</span>
+          <span class="as-entry-pill">camping</span>
+        </div>
+        <div class="as-entry-title">What I Packed for Havasupai</div>
+        <div class="as-entry-desc">The exact gear that survived a 10-mile canyon hike — and the one thing I forgot that almost ended the trip.</div>
+        <div class="as-entry-meta">Packing guide · 8 min read</div>
         <div class="as-entry-read">read this story →</div>
       </div>
     </a>
