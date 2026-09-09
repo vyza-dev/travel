@@ -1523,6 +1523,24 @@ body {
   color: rgba(44, 26, 14, 0.4);
   margin-top: 8px;
 }
+
+.story-footer-credit {
+  font-family: 'Lora', serif;
+  font-size: 11px;
+  color: rgba(44, 26, 14, 0.4);
+  letter-spacing: 0.3px;
+  margin-top: 6px;
+}
+.story-footer-credit a {
+  color: rgba(44, 26, 14, 0.6);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(44, 26, 14, 0.2);
+  transition: color 0.2s, border-color 0.2s;
+}
+.story-footer-credit a:hover {
+  color: var(--terracotta, #C4623A);
+  border-bottom-color: var(--terracotta, #C4623A);
+}
 </style>
 </head>
 <body>
@@ -1710,6 +1728,9 @@ body {
     As an Amazon Associate, I earn from qualifying purchases. Some links on this site are affiliate links &mdash; if you book or buy through them I may earn a small commission at no extra cost to you. I only recommend things I've actually used.
   </div>
   <div class="story-footer-note">&copy; 2026 a vyza ventures</div>
+  <div class="story-footer-credit">
+    site by <a href="https://avantivyza.com" target="_blank" rel="noopener">avanti vyza</a>
+  </div>
 </footer>
 
 <script src="/scripts/lightbox.js" defer></script>
