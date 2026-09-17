@@ -32,12 +32,12 @@
   </url>
 
   <url>
-    <loc>https://avyzaventures.netlify.app/stories/havasupai-packing</loc>
+    <loc>https://avyzaventures.netlify.app/stories/how-to-dress-for-winter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://avyzaventures.netlify.app/stories/havasupai.jpeg</image:loc>
-      <image:caption>What I packed for Havasupai — the exact gear that survived a 10-mile canyon hike, and the one thing I forgot.</image:caption>
+      <image:loc>https://avyzaventures.netlify.app/stories/how-to-dress-for-winter/hero-central-park.jpeg</image:loc>
+      <image:caption>How to dress for winter travel — a Texan's complete guide to coats, layers, boots, thermal tights and winter skincare, learned the hard way in Vienna and Copenhagen.</image:caption>
     </image:image>
   </url>
 
@@ -78,6 +78,16 @@
     <image:image>
       <image:loc>https://avyzaventures.netlify.app/stories/unplanned.jpeg</image:loc>
       <image:caption>Unplanned and unforgettable — how the best trips happen when you throw out the itinerary.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://avyzaventures.netlify.app/stories/winter-skincare</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://avyzaventures.netlify.app/stories/winter-skincare/hero-mountain.jpeg</image:loc>
+      <image:caption>Winter, But for Your Face — the winter travel skincare I trust after Vienna, Copenhagen, eight NYC winters and the mountains.</image:caption>
     </image:image>
   </url>
 
