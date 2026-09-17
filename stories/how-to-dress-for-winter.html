@@ -120,7 +120,7 @@ body {
 .jp-back {
   font-family: 'Caveat', cursive;
   font-size: 18px;
-  color: var(--ink);
+  color: var(--terracotta);
   background: none;
   border: none;
   cursor: pointer;
@@ -130,7 +130,7 @@ body {
   transition: color 0.2s;
   font-weight: 700;
 }
-.jp-back:hover { color: var(--terracotta); }
+.jp-back:hover { color: #fff; }
 .jp-back-arrow { font-size: 22px; }
 .jp-nav-title {
   font-family: 'Caveat', cursive;
@@ -1484,7 +1484,7 @@ body {
   .story-tours-grid { grid-template-columns: 1fr; }
 }
 .story-back-home {
-  display: inline-block; margin-top: 32px;
+  display: block; margin-top: 32px;
   font-family: 'Lora', serif; font-size: 15px;
   color: rgba(44,26,14,0.7); text-decoration: none;
   border-bottom: 1px solid rgba(44,26,14,0.3);
@@ -1618,12 +1618,6 @@ html { scroll-padding-top: 80px; }
 </div>
 
 <article class="jp-post">
-  <!-- Sticky back-to-home nav -->
-  <div class="jp-close-bar" style="position:sticky;top:0;z-index:100;background:rgba(44,26,14,0.95);backdrop-filter:blur(12px);">
-    <a href="/#journal" class="jp-back" style="text-decoration:none;" onclick="if(document.referrer && document.referrer.indexOf(location.origin)===0){history.back();return false;}"><span class="jp-back-arrow">&larr;</span> back to travel journal</a>
-    <div class="jp-nav-title">a vyza ventures &mdash; travel journal</div>
-  </div>
-
   <div class="jp-hero" style="background-image:url('/stories/how-to-dress-for-winter/hero-central-park.jpeg'); background-size:cover; background-position:center 25%;">
     <div class="jp-hero-overlay"></div>
     <span class="jp-hero-tag">Winter Gear Guide</span>
